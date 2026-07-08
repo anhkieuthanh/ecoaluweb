@@ -1,0 +1,77 @@
+[
+  {
+    "id": "ingot",
+    "category": "ingot",
+    "name": {
+      "vi": "Nhôm Thỏi (Ingot)",
+      "en": "Aluminum Ingot",
+      "cn": "铝锭 (Ingot)"
+    },
+    "description": {
+      "vi": "Sản phẩm nhôm thỏi cao cấp phục vụ cho các ngành công nghiệp đúc và chế tạo hợp kim.",
+      "en": "Premium aluminum ingot products for casting and alloy manufacturing industries.",
+      "cn": "用于铸造和合金制造行业的优质铝锭产品。"
+    },
+    "capacity": {
+      "vi": "30.000 tấn/năm",
+      "en": "30,000 tons/year",
+      "cn": "30,000 吨/年"
+    },
+    "specs": [
+      "P1020",
+      "A7",
+      "99.7% purity"
+    ],
+    "image": "/images/product-ingot.jpg"
+  },
+  {
+    "id": "billet",
+    "category": "billet",
+    "name": {
+      "vi": "Nhôm Billet (Thanh tròn)",
+      "en": "Aluminum Billet",
+      "cn": "铝圆棒 (Billet)"
+    },
+    "description": {
+      "vi": "Thanh nhôm tròn đúc sẵn chất lượng cao, nguyên liệu đầu vào hoàn hảo cho quá trình đùn ép.",
+      "en": "High-quality pre-cast aluminum round bars, perfect raw material for the extrusion process.",
+      "cn": "高质量预铸铝圆棒，挤压工艺的完美原材料。"
+    },
+    "capacity": {
+      "vi": "70.000 tấn/năm",
+      "en": "70,000 tons/year",
+      "cn": "70,000 吨/年"
+    },
+    "specs": [
+      "Series 6000 (6063, 6061, 6005)",
+      "T4, T5, T6",
+      "Diameter: 3 - 10 inches"
+    ],
+    "image": "/images/product-billet.jpg"
+  },
+  {
+    "id": "profile",
+    "category": "profile",
+    "name": {
+      "vi": "Nhôm Thanh Định Hình",
+      "en": "Aluminum Profiles",
+      "cn": "铝型材 (Profile)"
+    },
+    "description": {
+      "vi": "Nhôm định hình cao cấp phục vụ xây dựng, công nghiệp phụ trợ, năng lượng và hàng không.",
+      "en": "Premium aluminum profiles for construction, supporting industries, energy, and aviation.",
+      "cn": "用于建筑、配套产业、能源和航空的优质铝型材。"
+    },
+    "capacity": {
+      "vi": "15.000 tấn/năm (Sơn tĩnh điện 6.600t, Anode 8.400t)",
+      "en": "15,000 tons/year (Powder coating 6,600t, Anodized 8,400t)",
+      "cn": "15,000 吨/年 (静电喷涂 6,600吨, 阳极氧化 8,400吨)"
+    },
+    "specs": [
+      "A6063, A6005, A6061",
+      "Anodizing, Powder Coating",
+      "International standards"
+    ],
+    "image": "/images/product-profile.jpg"
+  }
+]

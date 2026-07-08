@@ -1,0 +1,439 @@
+{
+  "nav": {
+    "about": {
+      "vi": "Giới thiệu",
+      "en": "About Us",
+      "cn": "关于我们"
+    },
+    "products": {
+      "vi": "Sản phẩm",
+      "en": "Products",
+      "cn": "产品中心"
+    },
+    "solutions": {
+      "vi": "Giải pháp",
+      "en": "Solutions",
+      "cn": "业务解决方案"
+    },
+    "esg": {
+      "vi": "Phát triển bền vững",
+      "en": "Sustainability",
+      "cn": "可持续发展"
+    },
+    "news": {
+      "vi": "Tin tức",
+      "en": "News",
+      "cn": "新闻动态"
+    },
+    "contact": {
+      "vi": "Liên hệ",
+      "en": "Contact",
+      "cn": "联系我们"
+    }
+  },
+  "hero": {
+    "cta": {
+      "vi": "Nhận tư vấn ngay",
+      "en": "Get Consultation",
+      "cn": "立即获取咨询"
+    },
+    "slide1_title": {
+      "vi": "Kiến Tạo Tương Lai Nhôm Công Nghệ Cao",
+      "en": "Shaping the Future of High-Tech Aluminum",
+      "cn": "铸就高科技铝业的未来"
+    },
+    "slide1_sub": {
+      "vi": "Nhà máy nhôm EcoAlu tại Thanh Hóa - Trực tiếp hướng tới kinh tế tuần hoàn và sản xuất xanh bền vững.",
+      "en": "EcoAlu factory in Thanh Hoa - Steering directly toward a circular economy and green manufacturing.",
+      "cn": "位于清化省的EcoAlu工厂 - 直接迈向循环经济与可持续绿色生产。"
+    },
+    "slide2_title": {
+      "vi": "Công Nghệ Hiện Đại - Tiêu Chuẩn Quốc Tế",
+      "en": "Modern Technology - International Standards",
+      "cn": "现代技术 - 国际标准"
+    },
+    "slide2_sub": {
+      "vi": "Dây chuyền công nghệ ZheLu Technology kết hợp Robot ABB và lò kép hiện đại giúp tiết kiệm 20% năng lượng.",
+      "en": "ZheLu Technology combined with ABB Robots and advanced double furnaces saves 20% of energy.",
+      "cn": "哲鲁技术与ABB机器人及先进双室炉相结合，可节能20%。"
+    },
+    "slide3_title": {
+      "vi": "Bao Tiêu Sản Lượng - Hợp Tác Bền Vững",
+      "en": "Guaranteed Offtake - Sustainable Partnership",
+      "cn": "包销产量 - 可持续合作"
+    },
+    "slide3_sub": {
+      "vi": "100.000 tấn/năm đã được cam kết bao tiêu bởi các đối tác hàng đầu trong và ngoài nước.",
+      "en": "100,000 tons/year fully committed for offtake by top domestic and international partners.",
+      "cn": "国内外领先合作伙伴已承诺包销年产10万吨。"
+    }
+  },
+  "about": {
+    "title": {
+      "vi": "Về Chúng Tôi",
+      "en": "About EcoAlu",
+      "cn": "关于我们"
+    },
+    "intro_p1": {
+      "vi": "Thế giới đang đứng trước bước ngoặt lớn khi chuyển dịch sang mô hình kinh tế tuần hoàn. Tại đó, ngành tái chế kim loại không đơn thuần là hoạt động công nghiệp, mà là chìa khóa để bảo tồn tài nguyên và kiến tạo tương lai xanh cho hành tinh.",
+      "en": "The world stands at a turning point in transitioning to a circular economy model. Metal recycling is no longer just an industrial activity, but the key to resource conservation and creating a green future.",
+      "cn": "世界正处于向循环经济模式转型的重大转折点。金属回收不仅是一项工业活动，更是保护资源和为地球创造绿色未来的关键。"
+    },
+    "intro_p2": {
+      "vi": "Nhận thức rõ nhu cầu nhôm kỹ thuật cao đang bùng nổ phục vụ hạ tầng, hàng không và linh kiện điện tử, cùng sự thiếu hụt các đơn vị sản xuất quy mô tầm cỡ, nhà máy Nhôm công nghệ cao ECOALU tại Thanh Hóa ra đời với sứ mệnh xác lập vị thế mới trên bản đồ công nghiệp nhôm quốc gia.",
+      "en": "Recognizing the booming demand for high-tech aluminum in infrastructure, aviation, and electronics, and the gap in large-scale producers, the ECOALU High-Tech Aluminum factory in Thanh Hoa was born to redefine the national industry landscape.",
+      "cn": "认识到基础设施、航空和电子领域对高科技铝材的蓬勃需求，以及大型生产商的短缺，位于清化省的ECOALU高科技铝业工厂应运而生，旨在重新确立国家铝业版图的新地位。"
+    },
+    "intro_p3": {
+      "vi": "Được đầu tư bài bản trên nền tảng khảo sát các mô hình sản xuất hàng đầu thế giới, EcoAlu tập trung vào dòng sản phẩm chiến lược Ingot và Billet nhôm đạt chuẩn quốc tế khắt khe, khai thác hiệu quả lợi thế nguyên liệu dồi dào, vị trí địa lý đắc địa và công nghệ thông minh tự động hóa.",
+      "en": "Constructed on the foundation of researching leading manufacturing models worldwide, EcoAlu focuses on strategic, internationally certified Aluminum Ingot and Billet, leveraging abundant materials, a prime location, and smart automation technology.",
+      "cn": "EcoAlu在调研全球领先生产模式的基础上进行系统化投资，专注于达到严格国际标准的战略性铝锭和铝圆棒（Billet）产品，有效开发丰富的原料、优越的地理位置和智能自动化技术。"
+    },
+    "vision_mission": {
+      "vi": "Tầm Nhìn & Sứ Mệnh",
+      "en": "Vision & Mission",
+      "cn": "愿景与使命"
+    },
+    "board": {
+      "vi": "Hội Đồng Quản Trị",
+      "en": "Board of Directors",
+      "cn": "董事会"
+    },
+    "philosophy": {
+      "vi": "Triết Lý Kinh Doanh",
+      "en": "Business Philosophy",
+      "cn": "经营理念"
+    },
+    "history": {
+      "vi": "Lịch Sử Phát Triển",
+      "en": "Development History",
+      "cn": "发展历史"
+    },
+    "structure": {
+      "vi": "Cơ Cấu Tổ Chức",
+      "en": "Organizational Structure",
+      "cn": "组织架构"
+    },
+    "culture": {
+      "vi": "Văn Hóa Doanh Nghiệp",
+      "en": "Corporate Culture",
+      "cn": "企业文化"
+    }
+  },
+  "stats": {
+    "title": {
+      "vi": "Số Liệu Nổi Bật",
+      "en": "Outstanding Figures",
+      "cn": "突出的数字"
+    },
+    "investment": {
+      "vi": "Tổng vốn đầu tư",
+      "en": "Total Investment",
+      "cn": "总投资额"
+    },
+    "investment_desc": {
+      "vi": "980 Tỷ VNĐ (~37 Triệu USD) chia làm 2 giai đoạn",
+      "en": "980 Billion VND (~$37M USD) in 2 phases",
+      "cn": "9800亿越盾 (~3700万美元)，分两个阶段"
+    },
+    "capacity": {
+      "vi": "Năng lực sản xuất",
+      "en": "Production Capacity",
+      "cn": "生产能力"
+    },
+    "capacity_desc": {
+      "vi": "100.000 tấn nhôm thỏi & nhôm thanh/năm",
+      "en": "100,000 tons of ingot & billet/year",
+      "cn": "年产10万吨铝锭和铝圆棒"
+    },
+    "area": {
+      "vi": "Quy hoạch diện tích",
+      "en": "Total Area Layout",
+      "cn": "总规划面积"
+    },
+    "area_desc": {
+      "vi": "103.621 m2 với 20.700 m2 mảng xanh sinh thái",
+      "en": "103,621 m2 with 20,700 m2 eco-green spaces",
+      "cn": "103,621平方米，其中包含20,700平方米的生态绿化"
+    },
+    "efficiency": {
+      "vi": "Hiệu suất công nghệ",
+      "en": "Tech Performance",
+      "cn": "技术性能"
+    },
+    "efficiency_desc": {
+      "vi": "Đạt ngưỡng 96% - 98% vận hành thông minh",
+      "en": "Reaching 96% - 98% smart operation efficiency",
+      "cn": "达到96% - 98%的智能运行效率"
+    }
+  },
+  "logistics": {
+    "title": {
+      "vi": "Lợi Thế Vị Trí & Logistics",
+      "en": "Location & Logistics Advantages",
+      "cn": "地理位置与物流优势"
+    },
+    "desc": {
+      "vi": "Tọa lạc tại Lô CN-05, Cụm công nghiệp Hợp Thắng, Triệu Sơn, Thanh Hóa. Nhà máy nằm tại cửa ngõ hạ tầng kết nối khu vực và quốc tế, tối ưu hóa tối đa chi phí logistics đầu vào và đầu ra.",
+      "en": "Located at Lot CN-05, Hop Thang Industrial Cluster, Trieu Son, Thanh Hoa. The factory is at the gateway of regional and international infrastructure, optimizing both inbound and outbound logistics costs.",
+      "cn": "位于清化省赵山县合胜工业区CN-05地块。工厂处于区域和国际基础设施的门户，最大限度地优化了进出口物流成本。"
+    },
+    "port": {
+      "vi": "Cách Cảng Quốc Tế Nghi Sơn",
+      "en": "To Nghi Son Int'l Port",
+      "cn": "距离宜山国际港"
+    },
+    "airport": {
+      "vi": "Cách Sân Bay Thọ Xuân",
+      "en": "To Tho Xuan Airport",
+      "cn": "距离寿春机场"
+    },
+    "city": {
+      "vi": "Cách Thành Phố Thanh Hóa",
+      "en": "To Thanh Hoa City Center",
+      "cn": "距离清化市中心"
+    },
+    "route_title": {
+      "vi": "Tuyến đường nguyên liệu huyết mạch",
+      "en": "Key Raw Material Route",
+      "cn": "原材料核心物流路线"
+    },
+    "route_desc": {
+      "vi": "Kết nối trực tiếp thông qua tuyến Cửa khẩu Cầu Treo (Hà Tĩnh) - Lào và các nước tiểu vùng sông Mê Kông, đảm bảo nguồn nguyên liệu nhôm dồi dào, ổn định, kiểm soát chặt chẽ chi phí và loại bỏ rủi ro biến động thị trường toàn cầu.",
+      "en": "Directly connected via the Cau Treo Border Gate (Ha Tinh) to Laos and the Mekong subregion, securing an abundant, stable raw material supply, tightly controlling costs, and buffering against global market volatility.",
+      "cn": "通过吊桥关（河静）与老挝及湄公河次区域直接相连，确保充足稳定的原材料供应，严格控制成本并消除全球市场波动的风险。"
+    }
+  },
+  "products_sec": {
+    "title": {
+      "vi": "Sản Phẩm Của Chúng Tôi",
+      "en": "Our Products",
+      "cn": "我们的产品"
+    },
+    "subtitle": {
+      "vi": "Các dòng sản phẩm nhôm kỹ thuật cao đạt chứng chỉ chất lượng quốc tế khắt khe nhất.",
+      "en": "High-tech aluminum product lines compliant with the most stringent international certifications.",
+      "cn": "符合最严格国际质量认证的高科技铝产品线。"
+    },
+    "specs_label": {
+      "vi": "Thông số kỹ thuật:",
+      "en": "Specifications:",
+      "cn": "技术参数:"
+    },
+    "capacity_label": {
+      "vi": "Công suất:",
+      "en": "Capacity:",
+      "cn": "产能:"
+    }
+  },
+  "solutions_sec": {
+    "title": {
+      "vi": "Giải Pháp Doanh Nghiệp Toàn Diện",
+      "en": "Comprehensive Business Solutions",
+      "cn": "全面的业务解决方案"
+    },
+    "domestic_title": {
+      "vi": "Giải Pháp Trong Nước",
+      "en": "Domestic Market Solutions",
+      "cn": "国内市场解决方案"
+    },
+    "domestic_desc": {
+      "vi": "Cung cấp trực tiếp và ổn định 40% sản lượng cho các doanh nghiệp đầu ngành tại Việt Nam như Austdoor, Việt Pháp Shal, Euroha, Ngọc Diệp, CNC Tech. Giúp nội địa hóa chuỗi cung ứng nhôm.",
+      "en": "Directly and stably supply 40% of production capacity to leading companies in Vietnam such as Austdoor, Viet Phap Shal, Euroha, Ngoc Diep, CNC Tech, enabling localized supply chains.",
+      "cn": "向越南领先企业如Austdoor、法国越Shal、Euroha、玉叶、CNC Tech等直接稳定供应40%的产能，助力铝业供应链的本地化。"
+    },
+    "intl_title": {
+      "vi": "Giải Pháp Xuất Khẩu Quốc Tế",
+      "en": "International Export Solutions",
+      "cn": "国际出口解决方案"
+    },
+    "intl_desc": {
+      "vi": "Định hướng xuất khẩu 60% sản lượng sang các thị trường lớn và khắt khe nhất thế giới như Mỹ, EU, Nhật Bản, Hàn Quốc và Trung Quốc thông qua các biên bản ghi nhớ (MOU) bao tiêu trọn gói.",
+      "en": "Exporting 60% of output to major and strict global markets including the USA, EU, Japan, South Korea, and China, backed by comprehensive offtake agreements (MOUs).",
+      "cn": "通过全面的包销协议 (MOU)，将60%的产量出口到美国、欧盟、日本、韩国和中国等全球最主要且最严格的市场。"
+    },
+    "download_title": {
+      "vi": "Tài Liệu Doanh Nghiệp",
+      "en": "Corporate Documents",
+      "cn": "企业文件"
+    },
+    "download_btn": {
+      "vi": "Tải Brochure PDF",
+      "en": "Download Brochure PDF",
+      "cn": "下载电子画册 (PDF)"
+    }
+  },
+  "esg_sec": {
+    "title": {
+      "vi": "Phát Triển Bền Vững (ESG)",
+      "en": "Sustainable Development (ESG)",
+      "cn": "可持续发展 (ESG)"
+    },
+    "env_title": {
+      "vi": "Môi Trường (E)",
+      "en": "Environment (E)",
+      "cn": "环境 (E)"
+    },
+    "env_desc": {
+      "vi": "Tiết kiệm 20% năng lượng tiêu thụ nhờ tích hợp công nghệ lò kép thế hệ mới. Thiết lập 20.700 m2 diện tích cây xanh sinh thái nội khu, đảm bảo hài hòa sinh thái.",
+      "en": "Saves 20% of energy consumption via new-generation double furnaces. Establishing 20,700 m2 of internal eco-green space for ecological harmony.",
+      "cn": "通过集成新一代双室炉，节能20%。内部绿化规划达20,700平方米，确保生态和谐。"
+    },
+    "soc_title": {
+      "vi": "Xã Hội (S)",
+      "en": "Social (S)",
+      "cn": "社会 (S)"
+    },
+    "soc_desc": {
+      "vi": "Tạo ra việc làm bền vững cho hơn 120 lao động có trình độ chuyên môn cao tại địa phương, đi kèm quy chuẩn an toàn lao động quốc tế.",
+      "en": "Creating stable jobs for over 120 highly skilled local workers, compliant with international safety and labor standards.",
+      "cn": "为当地120多名高技能人才创造稳定的就业机会，符合国际劳动安全标准。"
+    },
+    "gov_title": {
+      "vi": "Quản Trị (G)",
+      "en": "Governance (G)",
+      "cn": "公司治理 (G)"
+    },
+    "gov_desc": {
+      "vi": "Vận hành thông minh tích hợp trên nền tảng PLC Siemens, Mitsubishi, ERP, MES và IoT, kiểm soát rủi ro và minh bạch mọi quy trình sản xuất.",
+      "en": "Smart operations integrated via Siemens & Mitsubishi PLCs, ERP, MES, and IoT platforms, ensuring risk control and process transparency.",
+      "cn": "集成西门子、三菱PLC、ERP、MES和物联网平台进行智能运行，控制风险并使每个生产过程透明化。"
+    }
+  },
+  "timeline_sec": {
+    "title": {
+      "vi": "Lộ Trình Phát Triển Dự Án",
+      "en": "Project Development Timeline",
+      "cn": "项目发展路线图"
+    },
+    "phase1": {
+      "vi": "Tháng 07/2026",
+      "en": "July 2026",
+      "cn": "2026年7月"
+    },
+    "phase1_desc": {
+      "vi": "Hoàn thiện đầy đủ thủ tục pháp lý của dự án.",
+      "en": "Complete all legal and licensing procedures for the project.",
+      "cn": "完成项目的所有法律程序。"
+    },
+    "phase2": {
+      "vi": "Tháng 03/2027",
+      "en": "March 2027",
+      "cn": "2027年3月"
+    },
+    "phase2_desc": {
+      "vi": "Hoàn thành xây dựng cơ bản và lắp đặt máy móc thiết bị nhà máy.",
+      "en": "Finish basic construction and install machinery/equipment.",
+      "cn": "完成基本建设和工厂机器设备的安装。"
+    },
+    "phase3": {
+      "vi": "Tháng 04/2027",
+      "en": "April 2027",
+      "cn": "2027年4月"
+    },
+    "phase3_desc": {
+      "vi": "Chạy thử nghiệm hệ thống và chính thức đi vào vận hành thương mại.",
+      "en": "Conduct test runs and officially enter commercial operation.",
+      "cn": "运行系统测试并正式投入商业运营。"
+    },
+    "phase4": {
+      "vi": "Năm 2028 - 2030+",
+      "en": "Year 2028 - 2030+",
+      "cn": "2028年 - 2030+年"
+    },
+    "phase4_desc": {
+      "vi": "Nâng công suất vận hành từ 65% lên 100%, kỳ vọng doanh thu đạt 8.153 tỷ VNĐ/năm.",
+      "en": "Increase capacity from 65% to 100%, targeting annual revenue of 8,153 Billion VND.",
+      "cn": "运行产能从65%提升至100%，预期年收入达81,530亿越盾。"
+    }
+  },
+  "news_sec": {
+    "title": {
+      "vi": "Tin Tức & Sự Kiện",
+      "en": "News & Events",
+      "cn": "新闻与事件"
+    },
+    "cat_enterprise": {
+      "vi": "Tin Doanh Nghiệp",
+      "en": "Corporate News",
+      "cn": "企业新闻"
+    },
+    "cat_market": {
+      "vi": "Cập Nhật Thị Trường",
+      "en": "Market Updates",
+      "cn": "市场动态"
+    },
+    "cat_internal": {
+      "vi": "Tin Nội Bộ",
+      "en": "Internal News",
+      "cn": "内部新闻"
+    },
+    "cat_csr": {
+      "vi": "Hoạt Động CSR",
+      "en": "CSR Activities",
+      "cn": "社会责任"
+    },
+    "cat_events": {
+      "vi": "Sự Kiện Nổi Bật",
+      "en": "Highlighted Events",
+      "cn": "重要活动"
+    },
+    "read_more": {
+      "vi": "Xem chi tiết",
+      "en": "Read More",
+      "cn": "查看详情"
+    }
+  },
+  "contact_sec": {
+    "title": {
+      "vi": "Liên Hệ Hợp Tác",
+      "en": "Contact For Collaboration",
+      "cn": "联系合作"
+    },
+    "subtitle": {
+      "vi": "Kết nối với EcoAlu để thiết lập mối quan hệ hợp tác lâu dài và bền vững.",
+      "en": "Connect with EcoAlu to establish a long-term and sustainable partnership.",
+      "cn": "与EcoAlu联系，建立长期可持续的合作伙伴关系。"
+    },
+    "branch_hn": {
+      "vi": "Trụ sở chính",
+      "en": "Headquarters",
+      "cn": "总部"
+    },
+    "branch_factory": {
+      "vi": "Nhà máy Thanh Hóa",
+      "en": "Thanh Hoa Factory",
+      "cn": "清化工厂"
+    },
+    "form_name": {
+      "vi": "Họ và tên *",
+      "en": "Full Name *",
+      "cn": "姓名 *"
+    },
+    "form_phone": {
+      "vi": "Số điện thoại *",
+      "en": "Phone Number *",
+      "cn": "电话号码 *"
+    },
+    "form_email": {
+      "vi": "Địa chỉ Email",
+      "en": "Email Address",
+      "cn": "电子邮件"
+    },
+    "form_message": {
+      "vi": "Nội dung lời nhắn *",
+      "en": "Message Content *",
+      "cn": "留言内容 *"
+    },
+    "form_submit": {
+      "vi": "Gửi thông tin",
+      "en": "Submit Information",
+      "cn": "提交信息"
+    },
+    "form_success": {
+      "vi": "Cảm ơn bạn! Thông tin của bạn đã được gửi thành công.",
+      "en": "Thank you! Your information has been submitted successfully.",
+      "cn": "谢谢！您的信息已成功提交。"
+    }
+  }
+}

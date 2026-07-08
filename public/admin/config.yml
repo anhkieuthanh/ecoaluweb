@@ -1,0 +1,234 @@
+local_backend: false
+backend:
+  name: github
+  repo: atif/Ecoalu_web # Thay đổi thành "username/repository-name" của bạn trên GitHub
+  branch: main
+
+# Nơi chứa ảnh do người dùng đăng tải từ Dashboard
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "content"
+    label: "Quản lý nội dung"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "news"
+        label: "Danh sách bài viết"
+        file: "src/data/news.json"
+        format: "json"
+        fields:
+          - name: "articles"
+            label: "Danh sách bài viết"
+            label_singular: "Bài viết"
+            widget: "list"
+            fields:
+              - { label: "ID bài viết (Không dấu, ví dụ: news-6)", name: "id", widget: "string" }
+              - { label: "Thể loại", name: "category", widget: "select", options: [ {label: "Doanh nghiệp", value: "enterprise"}, {label: "Thị trường", value: "market"}, {label: "Nội bộ", value: "internal"}, {label: "Hoạt động xã hội (CSR)", value: "csr"}, {label: "Sự kiện", value: "events"} ] }
+              - label: "Tiêu đề bài viết"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "string" }
+                  - { label: "Tiếng Anh (English)", name: "en", widget: "string" }
+                  - { label: "Tiếng Trung (Chinese)", name: "cn", widget: "string" }
+              - label: "Tóm tắt ngắn"
+                name: "summary"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "text" }
+                  - { label: "Tiếng Anh (English)", name: "en", widget: "text" }
+                  - { label: "Tiếng Trung (Chinese)", name: "cn", widget: "text" }
+              - { label: "Ngày đăng", name: "date", widget: "datetime", format: "YYYY-MM-DD", value_format: "YYYY-MM-DD" }
+              - { label: "Ảnh tiêu đề bài viết", name: "image", widget: "image" }
+
+      - name: "translations"
+        label: "Quản lý Tiêu đề & Nội dung chữ"
+        file: "src/data/translations.json"
+        format: "json"
+        fields:
+          # Hero Section
+          - label: "Mục Slide biểu ngữ đầu trang (Hero Banner)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - label: "Nút bấm hành động (CTA)"
+                name: "cta"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "string" }
+                  - { label: "Tiếng Anh", name: "en", widget: "string" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "string" }
+              - label: "Slide 1: Tiêu đề chính"
+                name: "slide1_title"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "string" }
+                  - { label: "Tiếng Anh", name: "en", widget: "string" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "string" }
+              - label: "Slide 1: Phụ đề mô tả"
+                name: "slide1_sub"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "text" }
+                  - { label: "Tiếng Anh", name: "en", widget: "text" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "text" }
+              - label: "Slide 2: Tiêu đề chính"
+                name: "slide2_title"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "string" }
+                  - { label: "Tiếng Anh", name: "en", widget: "string" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "string" }
+              - label: "Slide 2: Phụ đề mô tả"
+                name: "slide2_sub"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "text" }
+                  - { label: "Tiếng Anh", name: "en", widget: "text" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "text" }
+              - label: "Slide 3: Tiêu đề chính"
+                name: "slide3_title"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "string" }
+                  - { label: "Tiếng Anh", name: "en", widget: "string" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "string" }
+              - label: "Slide 3: Phụ đề mô tả"
+                name: "slide3_sub"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "text" }
+                  - { label: "Tiếng Anh", name: "en", widget: "text" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "text" }
+
+          # About Section
+          - label: "Mục Giới thiệu (About Us)"
+            name: "about"
+            widget: "object"
+            fields:
+              - label: "Tiêu đề mục"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "string" }
+                  - { label: "Tiếng Anh", name: "en", widget: "string" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "string" }
+              - label: "Đoạn giới thiệu 1"
+                name: "intro_p1"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "text" }
+                  - { label: "Tiếng Anh", name: "en", widget: "text" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "text" }
+              - label: "Đoạn giới thiệu 2"
+                name: "intro_p2"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "text" }
+                  - { label: "Tiếng Anh", name: "en", widget: "text" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "text" }
+
+          # Logistics Section
+          - label: "Mục Logistics & Vị trí"
+            name: "logistics"
+            widget: "object"
+            fields:
+              - label: "Tiêu đề chính"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "string" }
+                  - { label: "Tiếng Anh", name: "en", widget: "string" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "string" }
+              - label: "Đoạn mô tả chi tiết"
+                name: "desc"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "text" }
+                  - { label: "Tiếng Anh", name: "en", widget: "text" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "text" }
+
+          # ESG Section
+          - label: "Mục Phát triển bền vững (ESG)"
+            name: "esg_sec"
+            widget: "object"
+            fields:
+              - label: "Tiêu đề chính"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "string" }
+                  - { label: "Tiếng Anh", name: "en", widget: "string" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "string" }
+              - label: "Tiêu đề Cột Môi trường (E)"
+                name: "env_title"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "string" }
+                  - { label: "Tiếng Anh", name: "en", widget: "string" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "string" }
+              - label: "Mô tả Cột Môi trường (E)"
+                name: "env_desc"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "text" }
+                  - { label: "Tiếng Anh", name: "en", widget: "text" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "text" }
+              - label: "Tiêu đề Cột Xã hội (S)"
+                name: "soc_title"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "string" }
+                  - { label: "Tiếng Anh", name: "en", widget: "string" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "string" }
+              - label: "Mô tả Cột Xã hội (S)"
+                name: "soc_desc"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "text" }
+                  - { label: "Tiếng Anh", name: "en", widget: "text" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "text" }
+              - label: "Tiêu đề Cột Quản trị (G)"
+                name: "gov_title"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "string" }
+                  - { label: "Tiếng Anh", name: "en", widget: "string" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "string" }
+              - label: "Mô tả Cột Quản trị (G)"
+                name: "gov_desc"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "text" }
+                  - { label: "Tiếng Anh", name: "en", widget: "text" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "text" }
+
+          # Contact Section
+          - label: "Mục Liên hệ & Địa chỉ"
+            name: "contact_sec"
+            widget: "object"
+            fields:
+              - label: "Tiêu đề chính"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "string" }
+                  - { label: "Tiếng Anh", name: "en", widget: "string" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "string" }
+              - label: "Tên Trụ sở"
+                name: "branch_hn"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "string" }
+                  - { label: "Tiếng Anh", name: "en", widget: "string" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "string" }
+              - label: "Tên Nhà máy"
+                name: "branch_factory"
+                widget: "object"
+                fields:
+                  - { label: "Tiếng Việt", name: "vi", widget: "string" }
+                  - { label: "Tiếng Anh", name: "en", widget: "string" }
+                  - { label: "Tiếng Trung", name: "cn", widget: "string" }

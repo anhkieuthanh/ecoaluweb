@@ -1,0 +1,58 @@
+[
+  {
+    "name": "ISO 9001",
+    "description": {
+      "vi": "Hệ thống quản lý chất lượng",
+      "en": "Quality Management System",
+      "cn": "质量管理体系"
+    }
+  },
+  {
+    "name": "ISO 14001",
+    "description": {
+      "vi": "Hệ thống quản lý môi trường",
+      "en": "Environmental Management System",
+      "cn": "环境管理体系"
+    }
+  },
+  {
+    "name": "RoHS",
+    "description": {
+      "vi": "Tiêu chuẩn hạn chế chất độc hại",
+      "en": "Restriction of Hazardous Substances",
+      "cn": "危害性物质限制指令"
+    }
+  },
+  {
+    "name": "EN 573",
+    "description": {
+      "vi": "Tiêu chuẩn nhôm & hợp kim nhôm Châu Âu",
+      "en": "European Std. for Aluminum Alloys",
+      "cn": "欧洲铝及铝合金标准"
+    }
+  },
+  {
+    "name": "EN 755",
+    "description": {
+      "vi": "Tiêu chuẩn nhôm định hình đùn ép Châu Âu",
+      "en": "European Std. for Extruded Profiles",
+      "cn": "欧洲挤压型材标准"
+    }
+  },
+  {
+    "name": "JIS H4100",
+    "description": {
+      "vi": "Tiêu chuẩn công nghiệp Nhật Bản",
+      "en": "Japanese Industrial Standard",
+      "cn": "日本工业标准"
+    }
+  },
+  {
+    "name": "ASTM B221",
+    "description": {
+      "vi": "Tiêu chuẩn hiệp hội vật liệu Mỹ",
+      "en": "American Society for Materials Std.",
+      "cn": "美国材料与试验协会标准"
+    }
+  }
+]

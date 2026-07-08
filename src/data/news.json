@@ -1,0 +1,82 @@
+[
+  {
+    "id": "news-1",
+    "category": "enterprise",
+    "title": {
+      "vi": "Dự án nhà máy Nhôm công nghệ cao EcoAlu tại Thanh Hóa chính thức khởi động",
+      "en": "EcoAlu High-Tech Aluminum Factory Project in Thanh Hoa Officially Launches",
+      "cn": "清化省EcoAlu高科技铝业工厂项目正式启动"
+    },
+    "summary": {
+      "vi": "Với tổng mức đầu tư 980 tỷ đồng, nhà máy hứa hẹn sẽ giải quyết điểm nghẽn thiếu hụt nhôm kỹ thuật cao tại Việt Nam.",
+      "en": "With a total investment of 980 billion VND, the factory promises to resolve the shortage of high-tech aluminum in Vietnam.",
+      "cn": "总投资达980亿越盾，该工厂有望解决越南高科技铝材短缺的瓶颈。"
+    },
+    "date": "2026-07-01",
+    "image": "/images/news-factory-launch.jpg"
+  },
+  {
+    "id": "news-2",
+    "category": "market",
+    "title": {
+      "vi": "Xu hướng chuyển dịch sang mô hình kinh tế tuần hoàn trong ngành nhôm",
+      "en": "Trend of Transitioning to Circular Economic Model in Aluminum Industry",
+      "cn": "铝行业向循环经济模式转型的趋势"
+    },
+    "summary": {
+      "vi": "Nhôm tái chế đang trở thành chìa khóa bảo tồn tài nguyên và giảm thiểu lượng carbon dấu chân ra môi trường.",
+      "en": "Recycled aluminum is becoming the key to resource conservation and carbon footprint reduction.",
+      "cn": "再生铝正成为节约资源和减少碳足迹的关键。"
+    },
+    "date": "2026-06-25",
+    "image": "/images/news-circular-economy.jpg"
+  },
+  {
+    "id": "news-3",
+    "category": "internal",
+    "title": {
+      "vi": "Đoàn lãnh đạo EcoAlu hoàn thành chuyến khảo sát các nhà máy nhôm hàng đầu châu Âu",
+      "en": "EcoAlu Leadership Delegation Completes Survey of Top European Aluminum Factories",
+      "cn": "EcoAlu领导代表团完成对欧洲顶尖铝厂的考察"
+    },
+    "summary": {
+      "vi": "Chuyến đi thực tế tích lũy kinh nghiệm quý báu trước khi vận hành dây chuyền công nghệ ZheLu kết hợp robot ABB.",
+      "en": "The field trip accumulated valuable experience before operating the ZheLu technology line combined with ABB robots.",
+      "cn": "在运行结合ABB机器人的哲鲁技术线之前，此次实地考察积累了宝贵的经验。"
+    },
+    "date": "2026-06-15",
+    "image": "/images/news-europe-survey.jpg"
+  },
+  {
+    "id": "news-4",
+    "category": "csr",
+    "title": {
+      "vi": "EcoAlu đồng hành cùng chương trình trồng cây phủ xanh cụm công nghiệp Hợp Thắng",
+      "en": "EcoAlu Accompanies Tree Planting Program to Green Hop Thang Industrial Cluster",
+      "cn": "EcoAlu伴随植树计划绿化合胜工业区"
+    },
+    "summary": {
+      "vi": "Với quy hoạch hơn 20.700 m2 cây xanh nội khu, EcoAlu cam kết tạo ra môi trường sản xuất hài hòa sinh thái.",
+      "en": "With over 20,700 m2 of internal green spaces, EcoAlu is committed to creating an ecologically harmonious production environment.",
+      "cn": "规划了超过20,700平方米的内部绿化，EcoAlu致力于创造生态和谐的生产环境。"
+    },
+    "date": "2026-06-08",
+    "image": "/images/news-csr-green.jpg"
+  },
+  {
+    "id": "news-5",
+    "category": "events",
+    "title": {
+      "vi": "Ký kết thỏa thuận bao tiêu sản phẩm (MOU) 100.000 tấn/năm với các đối tác chiến lược",
+      "en": "Signing Product Offtake Agreements (MOU) of 100,000 Tons/Year with Strategic Partners",
+      "cn": "与战略合作伙伴签署年产10万吨产品包销协议 (MOU)"
+    },
+    "summary": {
+      "vi": "Bảo chứng vững chắc cho sự thành công của dự án ngay trong quá trình xây dựng nhà máy.",
+      "en": "Solid proof of the project's success right during the construction process of the factory.",
+      "cn": "在工厂建设过程中，这是项目成功的有力证明。"
+    },
+    "date": "2026-05-28",
+    "image": "/images/news-mou-signing.jpg"
+  }
+]

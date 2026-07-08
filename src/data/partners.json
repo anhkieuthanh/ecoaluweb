@@ -1,0 +1,42 @@
+{
+  "metal": [
+    {
+      "name": "AUSTDOOR",
+      "logo": "/images/partners/austdoor.png"
+    },
+    {
+      "name": "Việt Pháp SHAL",
+      "logo": "/images/partners/vietphap.png"
+    },
+    {
+      "name": "EUROHA",
+      "logo": "/images/partners/euroha.png"
+    },
+    {
+      "name": "NGỌC DIỆP",
+      "logo": "/images/partners/ngocdiep.png"
+    },
+    {
+      "name": "CNC TECH THĂNG LONG",
+      "logo": "/images/partners/cnctech.png"
+    }
+  ],
+  "banks": [
+    {
+      "name": "VietinBank",
+      "logo": "/images/partners/vietinbank.png"
+    },
+    {
+      "name": "BIDV",
+      "logo": "/images/partners/bidv.png"
+    },
+    {
+      "name": "Agribank",
+      "logo": "/images/partners/agribank.png"
+    },
+    {
+      "name": "Vietcombank",
+      "logo": "/images/partners/vietcombank.png"
+    }
+  ]
+}

@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAlu - Nhà Máy Nhôm Công Nghệ Cao | Tầm Vóc Việt</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@500;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            dark: '#f8fafc',
+                            DEFAULT: '#059669',
+                            light: '#eefaf2',
+                        },
+                        accent: {
+                            green: '#10B981',
+                            'green-dark': '#047857',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fbfcfb;
+            color: #1e293b;
+            font-family: 'Roboto', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h2 {
+            color: #047857;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        .text-gradient-green {
+            background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-glass {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(5, 150, 105, 0.08);
+            box-shadow: 0 4px 20px -2px rgba(5, 150, 105, 0.04);
+        }
+        .bg-glass-heavy {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(5, 150, 105, 0.12);
+            box-shadow: 0 10px 30px -10px rgba(5, 150, 105, 0.08);
+        }
+        /* Custom Swiper pagination styling */
+        .swiper-pagination-bullets {
+            bottom: 30px !important;
+        }
+        .custom-swiper-bullet {
+            width: 32px !important;
+            height: 4px !important;
+            border-radius: 2px !important;
+            background-color: rgba(255, 255, 255, 0.3) !important;
+            opacity: 1 !important;
+            margin: 0 6px !important;
+            transition: all 0.3s ease !important;
+            display: inline-block !important;
+            cursor: pointer;
+        }
+        .custom-swiper-bullet-active {
+            background-color: #10B981 !important;
+            width: 48px !important;
+            box-shadow: 0 0 8px rgba(16, 185, 129, 0.5) !important;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gradient-to-b from-black/60 to-transparent py-5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+                    <img id="logo-img" src="../public/logo.png" alt="EcoAlu Logo" class="h-10 w-auto brightness-0 invert object-contain transition-all duration-300">
+                    <span id="logo-text" class="ml-3 font-heading font-extrabold text-lg sm:text-xl tracking-wider text-gradient-green transition-all duration-300">ECOALU</span>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden lg:flex space-x-4 items-center">
+                    <button onclick="scrollToSection('about')" class="nav-btn text-sm font-heading font-semibold text-slate-200 hover:text-accent-green px-3 py-2 transition" data-lang-key="nav.about">Giới thiệu</button>
+                    <button onclick="scrollToSection('products')" class="nav-btn text-sm font-heading font-semibold text-slate-200 hover:text-accent-green px-3 py-2 transition" data-lang-key="nav.products">Sản phẩm</button>
+                    <button onclick="scrollToSection('solutions')" class="nav-btn text-sm font-heading font-semibold text-slate-200 hover:text-accent-green px-3 py-2 transition" data-lang-key="nav.solutions">Giải pháp</button>
+                    <button onclick="scrollToSection('esg')" class="nav-btn text-sm font-heading font-semibold text-slate-200 hover:text-accent-green px-3 py-2 transition" data-lang-key="nav.esg">Phát triển bền vững</button>
+                    <button onclick="scrollToSection('news')" class="nav-btn text-sm font-heading font-semibold text-slate-200 hover:text-accent-green px-3 py-2 transition" data-lang-key="nav.news">Tin tức</button>
+                    <button onclick="scrollToSection('contact')" class="nav-btn text-sm font-heading font-semibold text-slate-200 hover:text-accent-green px-3 py-2 transition" data-lang-key="nav.contact">Liên hệ</button>
+                </nav>
+
+                <!-- Language Selector -->
+                <div id="lang-switcher" class="hidden lg:flex items-center space-x-2 border-l border-white/20 pl-4 text-slate-200">
+                    <button id="lang-vi" onclick="changeLanguage('vi')" class="text-xs font-bold px-2 py-1 rounded bg-primary text-white shadow">VI</button>
+                    <button id="lang-en" onclick="changeLanguage('en')" class="text-xs font-bold px-2 py-1 rounded text-slate-400 hover:text-slate-200">EN</button>
+                    <button id="lang-cn" onclick="changeLanguage('cn')" class="text-xs font-bold px-2 py-1 rounded text-slate-400 hover:text-slate-200">CN</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex lg:hidden items-center space-x-3">
+                    <select id="mobile-lang-select" onchange="changeLanguage(this.value)" class="bg-white/5 border border-white/10 rounded px-2 py-1 text-xs font-bold text-slate-200 cursor-pointer focus:outline-none">
+                        <option value="vi" class="bg-slate-900 text-slate-200">VI</option>
+                        <option value="en" class="bg-slate-900 text-slate-200">EN</option>
+                        <option value="cn" class="bg-slate-900 text-slate-200">CN</option>
+                    </select>
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-1 rounded bg-white/5 border border-white/10 text-slate-350 hover:text-white">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed inset-0 z-50 hidden transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="toggleMobileMenu()"></div>
+        <div class="absolute top-0 right-0 h-full w-4/5 max-w-sm bg-glass-heavy shadow-2xl p-6 flex flex-col justify-between">
+            <div>
+                <div class="flex items-center justify-between pb-6 border-b border-slate-200">
+                    <div class="flex items-center">
+                        <img src="../public/logo.png" alt="EcoAlu" class="h-8 w-auto">
+                        <span class="ml-2 font-heading font-extrabold text-primary">ECOALU</span>
+                    </div>
+                    <button onclick="toggleMobileMenu()" class="p-1 bg-slate-100 rounded text-slate-500 hover:text-slate-800">
+                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="mt-8 flex flex-col space-y-4">
+                    <button onclick="scrollToSection('about')" class="text-left font-heading font-semibold text-slate-800 hover:text-primary text-base" data-lang-key="nav.about">Giới thiệu</button>
+                    <button onclick="scrollToSection('products')" class="text-left font-heading font-semibold text-slate-800 hover:text-primary text-base" data-lang-key="nav.products">Sản phẩm</button>
+                    <button onclick="scrollToSection('solutions')" class="text-left font-heading font-semibold text-slate-800 hover:text-primary text-base" data-lang-key="nav.solutions">Giải pháp</button>
+                    <button onclick="scrollToSection('esg')" class="text-left font-heading font-semibold text-slate-800 hover:text-primary text-base" data-lang-key="nav.esg">Phát triển bền vững</button>
+                    <button onclick="scrollToSection('news')" class="text-left font-heading font-semibold text-slate-800 hover:text-primary text-base" data-lang-key="nav.news">Tin tức</button>
+                    <button onclick="scrollToSection('contact')" class="text-left font-heading font-semibold text-slate-800 hover:text-primary text-base" data-lang-key="nav.contact">Liên hệ</button>
+                </nav>
+            </div>
+            <div class="border-t border-slate-200 pt-6">
+                <div class="grid grid-cols-3 gap-2">
+                    <button onclick="changeLanguage('vi')" class="text-center py-2 text-xs font-bold rounded bg-primary text-white">VI</button>
+                    <button onclick="changeLanguage('en')" class="text-center py-2 text-xs font-bold rounded bg-slate-100 text-slate-700">EN</button>
+                    <button onclick="changeLanguage('cn')" class="text-center py-2 text-xs font-bold rounded bg-slate-100 text-slate-700">CN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+        
+        <!-- Hero Section -->
+        <section class="relative w-full h-screen bg-slate-950 overflow-hidden">
+            <div class="swiper hero-swiper w-full h-full">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide relative">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('../public/images/hero-factory-1.png')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-[#011a13] via-[#011a13]/75 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                                <div class="max-w-3xl">
+                                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-6 leading-tight" data-lang-key="hero.slide1_title">Kiến Tạo Tương Lai Nhôm Công Nghệ Cao</h1>
+                                    <p class="text-sm sm:text-lg text-slate-300 mb-10 leading-relaxed font-light" data-lang-key="hero.slide1_sub">Nhà máy nhôm EcoAlu tại Thanh Hóa - Trực tiếp hướng tới kinh tế tuần hoàn và sản xuất xanh bền vững.</p>
+                                    <button onclick="scrollToSection('contact')" class="bg-primary hover:bg-emerald-800 text-white px-8 py-3.5 rounded font-heading font-bold text-sm tracking-wide transition shadow-lg shadow-primary/20" data-lang-key="hero.cta">Nhận tư vấn ngay</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide relative">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('../public/images/hero-factory-2.png')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-[#011a13] via-[#011a13]/75 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                                <div class="max-w-3xl">
+                                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-6 leading-tight" data-lang-key="hero.slide2_title">Công Nghệ Hiện Đại - Tiêu Chuẩn Quốc Tế</h1>
+                                    <p class="text-sm sm:text-lg text-slate-300 mb-10 leading-relaxed font-light" data-lang-key="hero.slide2_sub">Dây chuyền công nghệ ZheLu Technology kết hợp Robot ABB và lò kép hiện đại giúp tiết kiệm 20% năng lượng.</p>
+                                    <button onclick="scrollToSection('contact')" class="bg-primary hover:bg-emerald-800 text-white px-8 py-3.5 rounded font-heading font-bold text-sm tracking-wide transition shadow-lg shadow-primary/20" data-lang-key="hero.cta">Nhận tư vấn ngay</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide relative">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('../public/images/hero-factory-3.png')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-[#011a13] via-[#011a13]/75 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                                <div class="max-w-3xl">
+                                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-6 leading-tight" data-lang-key="hero.slide3_title">Bao Tiêu Sản Lượng - Hợp Tác Bền Vững</h1>
+                                    <p class="text-sm sm:text-lg text-slate-300 mb-10 leading-relaxed font-light" data-lang-key="hero.slide3_sub">100.000 tấn/năm đã được cam kết bao tiêu bởi các đối tác hàng đầu trong và ngoài nước.</p>
+                                    <button onclick="scrollToSection('contact')" class="bg-primary hover:bg-emerald-800 text-white px-8 py-3.5 rounded font-heading font-bold text-sm tracking-wide transition shadow-lg shadow-primary/20" data-lang-key="hero.cta">Nhận tư vấn ngay</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-gradient-to-b from-primary-light/30 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-heading font-bold tracking-wide uppercase" data-lang-key="about.title">Về Chúng Tôi</h2>
+                    <div class="h-1 bg-primary w-16 mx-auto mt-4 rounded-full"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div>
+                        <div class="text-slate-600 mb-8 space-y-4 text-justify text-sm sm:text-base leading-relaxed">
+                            <p data-lang-key="about.intro_p1">Thế giới đang đứng trước bước ngoặt lớn khi chuyển dịch sang mô hình kinh tế tuần hoàn...</p>
+                            <p data-lang-key="about.intro_p2">Nhận thức rõ nhu cầu nhôm kỹ thuật cao đang bùng nổ...</p>
+                            <p data-lang-key="about.intro_p3">Được đầu tư bài bản trên nền tảng khảo sát các mô hình sản xuất...</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                            <div class="p-4 rounded-lg bg-glass border border-slate-100 flex items-start space-x-3">
+                                <span class="p-2 bg-primary-light text-primary rounded">🎯</span>
+                                <div>
+                                    <h4 class="text-xs font-bold text-slate-800" data-lang-key="about.vision_mission">Tầm Nhìn & Sứ Mệnh</h4>
+                                    <p class="text-[11px] text-slate-500 mt-1" data-lang-key="about.sub1">Sản xuất nhôm xanh công nghệ cao.</p>
+                                </div>
+                            </div>
+                            <div class="p-4 rounded-lg bg-glass border border-slate-100 flex items-start space-x-3">
+                                <span class="p-2 bg-primary-light text-primary rounded">👥</span>
+                                <div>
+                                    <h4 class="text-xs font-bold text-slate-800" data-lang-key="about.board">Hội Đồng Quản Trị</h4>
+                                    <p class="text-[11px] text-slate-500 mt-1" data-lang-key="about.sub2">Đội ngũ giàu kinh nghiệm quốc tế.</p>
+                                </div>
+                            </div>
+                            <div class="p-4 rounded-lg bg-glass border border-slate-100 flex items-start space-x-3">
+                                <span class="p-2 bg-primary-light text-primary rounded">💡</span>
+                                <div>
+                                    <h4 class="text-xs font-bold text-slate-800" data-lang-key="about.philosophy">Triết Lý Kinh Doanh</h4>
+                                    <p class="text-[11px] text-slate-500 mt-1" data-lang-key="about.sub3">Phát triển dựa trên R&D bền vững.</p>
+                                </div>
+                            </div>
+                            <div class="p-4 rounded-lg bg-glass border border-slate-100 flex items-start space-x-3">
+                                <span class="p-2 bg-primary-light text-primary rounded">⏳</span>
+                                <div>
+                                    <h4 class="text-xs font-bold text-slate-800" data-lang-key="about.history">Lịch Sử Phát Triển</h4>
+                                    <p class="text-[11px] text-slate-500 mt-1" data-lang-key="about.sub4">Hành trình khẳng định nhôm Việt.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative w-full aspect-square rounded-2xl overflow-hidden border border-slate-100 shadow-xl bg-slate-50">
+                        <img src="../public/images/factory-layout.png" alt="EcoAlu Layout" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-16 bg-[#f8fafc] border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="p-6 rounded-xl bg-white border border-slate-150 shadow-sm relative group hover:shadow-md transition-all duration-300">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 block font-heading" data-lang-key="stats.investment">Tổng vốn đầu tư</span>
+                        <div class="flex items-baseline mb-2">
+                            <span class="text-4xl sm:text-5xl font-heading font-extrabold text-slate-800 tracking-tight">980</span>
+                            <span class="text-lg sm:text-xl font-heading font-bold text-primary ml-1">Tỷ</span>
+                        </div>
+                        <p class="text-xs text-slate-500 font-light leading-relaxed mt-2" data-lang-key="stats.investment_desc">980 Tỷ VNĐ (~37 Triệu USD)</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-white border border-slate-150 shadow-sm relative group hover:shadow-md transition-all duration-300">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 block font-heading" data-lang-key="stats.capacity">Năng lực sản xuất</span>
+                        <div class="flex items-baseline mb-2">
+                            <span class="text-4xl sm:text-5xl font-heading font-extrabold text-slate-800 tracking-tight">100k</span>
+                            <span class="text-lg sm:text-xl font-heading font-bold text-primary ml-1">Tấn</span>
+                        </div>
+                        <p class="text-xs text-slate-500 font-light leading-relaxed mt-2" data-lang-key="stats.capacity_desc">100.000 tấn nhôm thỏi & thanh/năm</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-white border border-slate-150 shadow-sm relative group hover:shadow-md transition-all duration-300">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 block font-heading" data-lang-key="stats.area">Quy hoạch diện tích</span>
+                        <div class="flex items-baseline mb-2">
+                            <span class="text-4xl sm:text-5xl font-heading font-extrabold text-slate-800 tracking-tight">103k</span>
+                            <span class="text-lg sm:text-xl font-heading font-bold text-primary ml-1">m²</span>
+                        </div>
+                        <p class="text-xs text-slate-500 font-light leading-relaxed mt-2" data-lang-key="stats.area_desc">103.621 m2 với 20.700 m2 mảng xanh</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-white border border-slate-150 shadow-sm relative group hover:shadow-md transition-all duration-300">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 block font-heading" data-lang-key="stats.efficiency">Hiệu suất công nghệ</span>
+                        <div class="flex items-baseline mb-2">
+                            <span class="text-4xl sm:text-5xl font-heading font-extrabold text-slate-800 tracking-tight">98</span>
+                            <span class="text-lg sm:text-xl font-heading font-bold text-primary ml-1">%</span>
+                        </div>
+                        <p class="text-xs text-slate-500 font-light leading-relaxed mt-2" data-lang-key="stats.efficiency_desc">Đạt ngưỡng 96-98% vận hành thông minh</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Distribution Section -->
+        <section class="py-20 bg-gradient-to-b from-white to-primary-light/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-heading font-bold uppercase" data-lang-key="logistics.title">Lợi Thế Vị Trí & Logistics</h2>
+                    <div class="h-1 bg-primary w-16 mx-auto mt-4 rounded-full"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-5">
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-6 leading-tight" data-lang-key="logistics.subtitle">Cửa ngõ kết nối giao thương trong nước & quốc tế</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6 text-justify" data-lang-key="logistics.desc">Tọa lạc tại Cụm công nghiệp Hợp Thắng, Thanh Hóa...</p>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3 text-xs sm:text-sm">
+                                <span class="p-2 bg-glass rounded text-primary">⚓</span>
+                                <span><b data-lang-key="logistics.port">Cách Cảng Nghi Sơn</b>: 60km</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-xs sm:text-sm">
+                                <span class="p-2 bg-glass rounded text-primary">✈️</span>
+                                <span><b data-lang-key="logistics.airport">Cách Sân Bay Thọ Xuân</b>: 18km</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-xs sm:text-sm">
+                                <span class="p-2 bg-glass rounded text-primary">📍</span>
+                                <span><b data-lang-key="logistics.city">Cách TP. Thanh Hóa</b>: 23km</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-7">
+                        <div class="p-4 rounded-xl bg-glass border border-slate-100">
+                            <h4 class="text-xs font-bold text-primary mb-3" data-lang-key="logistics.route_title">Tuyến đường nguyên liệu huyết mạch</h4>
+                            <p class="text-[11px] text-slate-500 mb-4" data-lang-key="logistics.route_desc">Kết nối trực tiếp thông qua tuyến Cửa khẩu Cầu Treo (Hà Tĩnh) - Lào...</p>
+                            <div class="h-64 sm:h-80 w-full relative bg-slate-50 rounded-xl overflow-hidden border border-slate-150 flex items-center justify-center p-4">
+                                <svg class="w-full h-full text-slate-350" viewBox="0 0 600 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Grid Lines -->
+                                    <path d="M 0,40 L 600,40 M 0,90 L 600,90 M 0,140 L 600,140 M 0,190 L 600,190 M 0,240 L 600,240 M 0,290 L 600,290" stroke="rgba(0,0,0,0.02)" strokeWidth="1" />
+                                    <path d="M 100,0 L 100,320 M 200,0 L 200,320 M 300,0 L 300,320 M 400,0 L 400,320 M 500,0 L 500,320" stroke="rgba(0,0,0,0.02)" strokeWidth="1" />
+
+                                    <!-- Connecting lines -->
+                                    <path d="M 80,180 Q 145,160 210,180" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4,4" />
+                                    <path d="M 210,180 L 285,155" stroke="#10b981" strokeWidth="3" />
+                                    <path d="M 350,60 L 350,130" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="3,3" />
+                                    <path d="M 415,155 L 470,240" stroke="#059669" strokeWidth="3" />
+                                    <path d="M 470,240 Q 515,220 560,180" stroke="#047857" strokeWidth="2.5" strokeDasharray="6,4" />
+
+                                    <!-- Nodes & Labels -->
+                                    <circle cx="80" cy="180" r="6" fill="#64748b" />
+                                    <circle cx="80" cy="180" r="12" stroke="#64748b" strokeWidth="1" strokeOpacity="0.5" class="animate-ping" />
+                                    <text x="80" y="208" text-anchor="middle" fill="#475569" fontSize="9" fontWeight="bold">LAOS (LÀO)</text>
+
+                                    <circle cx="210" cy="180" r="6" fill="#059669" />
+                                    <text x="210" y="208" text-anchor="middle" fill="#475569" fontSize="9" fontWeight="bold">CỬA KHẨU CẦU TREO</text>
+
+                                    <g>
+                                        <rect x="285" y="130" width="130" height="50" rx="8" fill="#eefaf2" stroke="#059669" strokeWidth="2" />
+                                        <text x="350" y="149" text-anchor="middle" fill="#047857" fontSize="10" fontWeight="bold">NHÀ MÁY ECOALU</text>
+                                        <text x="350" y="165" text-anchor="middle" fill="#059669" fontSize="8" fontWeight="bold">TRIỆU SƠN, THANH HÓA</text>
+                                    </g>
+
+                                    <circle cx="350" cy="60" r="5" fill="#64748b" />
+                                    <text x="350" y="46" text-anchor="middle" fill="#475569" fontSize="9" fontWeight="semibold">SÂN BAY THỌ XUÂN (18km)</text>
+
+                                    <circle cx="470" cy="240" r="5" fill="#059669" />
+                                    <text x="470" y="265" text-anchor="middle" fill="#475569" fontSize="9" fontWeight="semibold">CẢNG NGHI SƠN (60km)</text>
+
+                                    <circle cx="560" cy="180" r="6" fill="#047857" />
+                                    <circle cx="560" cy="180" r="12" stroke="#047857" strokeWidth="1" strokeOpacity="0.5" class="animate-ping" />
+                                    <text x="560" y="208" text-anchor="middle" fill="#047857" fontSize="9" fontWeight="bold">EXPORT (MỸ, EU, NHẬT...)</text>
+                                </svg>
+
+                                <!-- Badge Overlay -->
+                                <div class="absolute top-4 left-4 bg-white border border-slate-200 rounded px-2.5 py-1 text-[10px] font-semibold text-slate-500 shadow-sm">
+                                    SƠ ĐỒ LOGISTICS THÔNG MINH
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-20 bg-gradient-to-b from-primary-light/20 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-heading font-bold uppercase" data-lang-key="products_sec.title">Sản Phẩm Của Chúng Tôi</h2>
+                    <div class="h-1 bg-primary w-16 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Product 1 -->
+                    <div class="p-6 rounded-2xl bg-glass border border-slate-100 flex flex-col justify-between shadow-sm">
+                        <div>
+                            <img src="../public/images/product-ingot.png" alt="Ingot" class="h-44 w-full object-cover rounded-lg mb-6">
+                            <h3 class="text-base font-bold text-slate-800 mb-2" data-lang-key="prod1.name">Nhôm Thỏi (Ingot)</h3>
+                            <p class="text-xs text-slate-600 mb-4 text-justify font-light" data-lang-key="prod1.desc">Sản phẩm nhôm thỏi cao cấp phục vụ đúc hợp kim.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-primary font-bold">
+                            <span data-lang-key="products_sec.capacity_label">Công suất:</span>
+                            <span data-lang-key="prod1.capacity">30.000 tấn/năm</span>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="p-6 rounded-2xl bg-glass border border-slate-100 flex flex-col justify-between shadow-sm">
+                        <div>
+                            <img src="../public/images/product-billet.png" alt="Billet" class="h-44 w-full object-cover rounded-lg mb-6">
+                            <h3 class="text-base font-bold text-slate-800 mb-2" data-lang-key="prod2.name">Nhôm Billet</h3>
+                            <p class="text-xs text-slate-600 mb-4 text-justify font-light" data-lang-key="prod2.desc">Thanh nhôm tròn chất lượng cao phục vụ đùn ép.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-primary font-bold">
+                            <span data-lang-key="products_sec.capacity_label">Công suất:</span>
+                            <span data-lang-key="prod2.capacity">70.000 tấn/năm</span>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="p-6 rounded-2xl bg-glass border border-slate-100 flex flex-col justify-between shadow-sm">
+                        <div>
+                            <img src="../public/images/product-profile.png" alt="Profiles" class="h-44 w-full object-cover rounded-lg mb-6">
+                            <h3 class="text-base font-bold text-slate-800 mb-2" data-lang-key="prod3.name">Nhôm Định Hình</h3>
+                            <p class="text-xs text-slate-600 mb-4 text-justify font-light" data-lang-key="prod3.desc">Các hệ thanh nhôm định hình cao cấp.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-primary font-bold">
+                            <span data-lang-key="products_sec.capacity_label">Công suất:</span>
+                            <span data-lang-key="prod3.capacity">15.000 tấn/năm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESG Section -->
+        <section id="esg" class="py-20 bg-gradient-to-b from-primary-light/20 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-heading font-bold uppercase" data-lang-key="esg_sec.title">Phát Triển Bền Vững (ESG)</h2>
+                    <div class="h-1 bg-primary w-16 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6 rounded-xl border border-emerald-100 bg-emerald-50/40 text-emerald-800">
+                        <h4 class="text-sm font-bold text-emerald-900 mb-3" data-lang-key="esg_sec.env_title">Môi Trường (E)</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed text-justify" data-lang-key="esg_sec.env_desc">Tiết kiệm 20% năng lượng nhờ tích hợp công nghệ lò kép thế hệ mới. Thiết lập 20.700 m2 diện tích cây xanh nội khu.</p>
+                    </div>
+                    <div class="p-6 rounded-xl border border-sky-100 bg-sky-50/40 text-sky-850">
+                        <h4 class="text-sm font-bold text-sky-900 mb-3" data-lang-key="esg_sec.soc_title">Xã Hội (S)</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed text-justify" data-lang-key="esg_sec.soc_desc">Tạo việc làm cho hơn 120 lao động kỹ thuật cao tại địa phương.</p>
+                    </div>
+                    <div class="p-6 rounded-xl border border-amber-100 bg-amber-50/40 text-amber-850">
+                        <h4 class="text-sm font-bold text-amber-900 mb-3" data-lang-key="esg_sec.gov_title">Quản Trị (G)</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed text-justify" data-lang-key="esg_sec.gov_desc">Vận hành thông minh tích hợp trên nền tảng PLC Siemens, Mitsubishi, ERP, MES...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="py-16 bg-[#f4faf6] border-t border-slate-100 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <!-- Metal Industry Partners -->
+                    <div>
+                        <div class="flex items-center space-x-2.5 mb-6">
+                            <svg class="h-5 w-5 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                            <h3 class="text-sm font-heading font-extrabold uppercase text-slate-700 tracking-wider" data-lang-key="partners.title_metal">Đối tác bao tiêu & Khách hàng đầu ngành</h3>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <!-- Austdoor -->
+                            <div class="h-16 flex items-center justify-center p-4 rounded-xl bg-white border border-slate-150 text-center shadow-sm">
+                                <svg class="h-6 w-auto max-w-full" viewBox="0 0 160 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <text x="5" y="21" fill="#0b52a0" font-family="'Montserrat', sans-serif" font-weight="900" font-size="16" letter-spacing="1">AUSTD</text>
+                                    <circle cx="82" cy="15" r="7" stroke="#e01a22" stroke-width="2.5" fill="none" />
+                                    <line x1="77" y1="12" x2="87" y2="12" stroke="#e01a22" stroke-width="1.2" />
+                                    <line x1="75" y1="15" x2="89" y2="15" stroke="#e01a22" stroke-width="1.2" />
+                                    <line x1="77" y1="18" x2="87" y2="18" stroke="#e01a22" stroke-width="1.2" />
+                                    <circle cx="100" cy="15" r="7" stroke="#0b52a0" stroke-width="2.5" fill="none" />
+                                    <line x1="95" y1="12" x2="105" y2="12" stroke="#0b52a0" stroke-width="1.2" />
+                                    <line x1="93" y1="15" x2="107" y2="15" stroke="#0b52a0" stroke-width="1.2" />
+                                    <line x1="95" y1="18" x2="105" y2="18" stroke="#0b52a0" stroke-width="1.2" />
+                                    <text x="111" y="21" fill="#0b52a0" font-family="'Montserrat', sans-serif" font-weight="900" font-size="16" letter-spacing="1">R</text>
+                                </svg>
+                            </div>
+                            <!-- Viet Phap -->
+                            <div class="h-16 flex items-center justify-center p-4 rounded-xl bg-white border border-slate-150 text-center shadow-sm">
+                                <svg class="h-6 w-auto max-w-full" viewBox="0 0 160 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="5" y="5" width="20" height="20" rx="3" fill="#0b52a0" />
+                                    <path d="M 10,9 L 15,20 L 20,9" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <text x="32" y="14" fill="#0b52a0" font-family="'Inter', sans-serif" font-weight="800" font-size="9" letter-spacing="0.5">VIET PHAP</text>
+                                    <text x="32" y="23" fill="#e01a22" font-family="'Inter', sans-serif" font-weight="900" font-size="8" letter-spacing="1.5">SHAL ALUM</text>
+                                </svg>
+                            </div>
+                            <!-- Euroha -->
+                            <div class="h-16 flex items-center justify-center p-4 rounded-xl bg-white border border-slate-150 text-center shadow-sm">
+                                <svg class="h-6 w-auto max-w-full" viewBox="0 0 140 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 5,5 H 22 V 22 H 5 Z" fill="#e01a22" />
+                                    <path d="M 10,10 H 27 V 27 H 10 Z" fill="#0b52a0" opacity="0.8" />
+                                    <text x="35" y="20" fill="#0b52a0" font-family="'Montserrat', sans-serif" font-weight="900" font-size="14" letter-spacing="1.5">EUROHA</text>
+                                </svg>
+                            </div>
+                            <!-- Ngoc Diep -->
+                            <div class="h-16 flex items-center justify-center p-4 rounded-xl bg-white border border-slate-150 text-center shadow-sm">
+                                <svg class="h-6 w-auto max-w-full" viewBox="0 0 150 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 5,20 L 12,6 L 19,20 L 12,16 Z" fill="#b8860b" />
+                                    <circle cx="12" cy="5" r="1.5" fill="#b8860b" />
+                                    <text x="27" y="19" fill="#1e293b" font-family="'Inter', sans-serif" font-weight="800" font-size="11" letter-spacing="1">NGOC DIEP</text>
+                                </svg>
+                            </div>
+                            <!-- CNCTech -->
+                            <div class="h-16 flex items-center justify-center p-4 rounded-xl bg-white border border-slate-150 text-center shadow-sm">
+                                <svg class="h-6 w-auto max-w-full" viewBox="0 0 150 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="5" y="6" width="18" height="18" rx="4" fill="#059669" />
+                                    <path d="M 9,15 H 19 M 14,10 V 20" stroke="#ffffff" stroke-width="2" />
+                                    <text x="29" y="19" fill="#059669" font-family="'Montserrat', sans-serif" font-weight="900" font-size="11" letter-spacing="1">CNCTECH</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bank Partners -->
+                    <div>
+                        <div class="flex items-center space-x-2.5 mb-6">
+                            <svg class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                            <h3 class="text-sm font-heading font-extrabold uppercase text-slate-700 tracking-wider" data-lang-key="partners.title_banks">Tài trợ tài chính & Ngân hàng liên kết</h3>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Vietinbank -->
+                            <div class="h-16 flex items-center justify-center p-4 rounded-xl bg-white border border-slate-150 text-center shadow-sm">
+                                <svg class="h-6.5 w-auto max-w-full" viewBox="0 0 130 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="15" cy="15" r="10" stroke="#0054a5" stroke-width="3" fill="none" />
+                                    <path d="M 15,5 A 10 10 0 0 1 25 15 L 15,15 Z" fill="#ed1c24" />
+                                    <rect x="12" y="12" width="6" height="6" fill="#ffffff" />
+                                    <text x="32" y="20" fill="#0054a5" font-family="'Inter', sans-serif" font-weight="bold" font-size="14" letter-spacing="-0.5">VietinBank</text>
+                                </svg>
+                            </div>
+                            <!-- BIDV -->
+                            <div class="h-16 flex items-center justify-center p-4 rounded-xl bg-white border border-slate-150 text-center shadow-sm">
+                                <svg class="h-6.5 w-auto max-w-full" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 15,5 L 18,12 L 25,15 L 18,18 L 15,25 L 12,18 L 5,15 L 12,12 Z" fill="#007d43" />
+                                    <path d="M 15,10 L 16.5,13.5 L 20,15 L 16.5,16.5 L 15,20 L 13.5,16.5 L 10,15 L 13.5,13.5 Z" fill="#ed1c24" />
+                                    <text x="32" y="21" fill="#007d43" font-family="'Inter', sans-serif" font-weight="800" font-size="16">BIDV</text>
+                                </svg>
+                            </div>
+                            <!-- Agribank -->
+                            <div class="h-16 flex items-center justify-center p-4 rounded-xl bg-white border border-slate-150 text-center shadow-sm">
+                                <svg class="h-6.5 w-auto max-w-full" viewBox="0 0 130 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="5" y="5" width="20" height="20" fill="#ba1a1a" stroke="#ba1a1a" stroke-width="1" />
+                                    <path d="M 8,22 C 12,18 18,12 22,8" stroke="#ffeb3b" stroke-width="2" stroke-linecap="round" />
+                                    <circle cx="12" cy="15" r="2" fill="#4caf50" />
+                                    <circle cx="16" cy="12" r="2" fill="#4caf50" />
+                                    <text x="32" y="20" fill="#ba1a1a" font-family="'Inter', sans-serif" font-weight="800" font-size="14" letter-spacing="-0.2">Agribank</text>
+                                </svg>
+                            </div>
+                            <!-- Vietcombank -->
+                            <div class="h-16 flex items-center justify-center p-4 rounded-xl bg-white border border-slate-150 text-center shadow-sm">
+                                <svg class="h-6.5 w-auto max-w-full" viewBox="0 0 150 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 12,5 Q 6,10 12,18 Q 18,22 22,25 Q 24,18 20,12 Q 16,6 12,5 Z" fill="#00a753" />
+                                    <path d="M 12,5 Q 15,12 22,25 Q 12,20 12,18 Z" fill="#71c043" />
+                                    <text x="28" y="20" fill="#0f763e" font-family="'Inter', sans-serif" font-weight="700" font-size="12" letter-spacing="-0.2">Vietcombank</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-heading font-bold uppercase" data-lang-key="contact_sec.title">Liên Hệ Hợp Tác</h2>
+                    <div class="h-1 bg-primary w-16 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <div class="p-4 rounded bg-glass border border-slate-150 shadow-sm">
+                            <h4 class="text-xs font-bold text-slate-800" data-lang-key="contact_sec.branch_hn">Trụ sở chính</h4>
+                            <p class="text-xs text-slate-600 mt-1">Tòa nhà Golden Field, 24 Nguyễn Cơ Thạch, Mỹ Đình, Nam Từ Liêm, Hà Nội</p>
+                        </div>
+                        <div class="p-4 rounded bg-glass border border-slate-150 shadow-sm">
+                            <h4 class="text-xs font-bold text-slate-800" data-lang-key="contact_sec.branch_factory">Nhà máy Thanh Hóa</h4>
+                            <p class="text-xs text-slate-600 mt-1">Lô CN-05, Cụm công nghiệp Hợp Thắng, Triệu Sơn, Thanh Hóa</p>
+                        </div>
+                    </div>
+
+                    <form class="p-6 rounded-2xl bg-glass-heavy border border-slate-200 shadow-md space-y-4" onsubmit="alert('Đã gửi thông tin liên hệ!'); return false;">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 mb-1" data-lang-key="contact_sec.form_name">Họ và tên *</label>
+                            <input type="text" required class="w-full bg-slate-50 border border-slate-200 rounded py-2 px-3 text-xs text-slate-800 focus:outline-none focus:border-primary">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 mb-1" data-lang-key="contact_sec.form_phone">Số điện thoại *</label>
+                            <input type="text" required class="w-full bg-slate-50 border border-slate-200 rounded py-2 px-3 text-xs text-slate-800 focus:outline-none focus:border-primary">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 mb-1" data-lang-key="contact_sec.form_message">Nội dung lời nhắn *</label>
+                            <textarea required rows="3" class="w-full bg-slate-50 border border-slate-200 rounded py-2 px-3 text-xs text-slate-800 focus:outline-none focus:border-primary resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white py-2.5 rounded text-xs font-bold uppercase tracking-wider transition hover:bg-opacity-90" data-lang-key="contact_sec.form_submit">Gửi thông tin</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#042a20] py-8 border-t border-emerald-950 text-slate-300">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs font-semibold uppercase tracking-widest">
+            <p>&copy; 2026 ECOALU. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Init Swiper
+        const swiper = new Swiper('.hero-swiper', {
+            loop: true,
+            effect: 'fade',
+            speed: 1000,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                bulletClass: 'custom-swiper-bullet',
+                bulletActiveClass: 'custom-swiper-bullet-active'
+            },
+        });
+
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const drawer = document.getElementById('mobile-drawer');
+            drawer.classList.toggle('hidden');
+        }
+
+        // Scroll to Section
+        function scrollToSection(id) {
+            const drawer = document.getElementById('mobile-drawer');
+            if (!drawer.classList.contains('hidden')) {
+                toggleMobileMenu();
+            }
+            const el = document.getElementById(id);
+            if (el) {
+                const offset = 80;
+                const pos = el.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top: pos, behavior: 'smooth' });
+            }
+        }
+
+        // Handle Header Styles on Scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            const logoImg = document.getElementById('logo-img');
+            const logoText = document.getElementById('logo-text');
+            const navBtns = document.querySelectorAll('.nav-btn');
+            const langSwitcher = document.getElementById('lang-switcher');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+            if (window.scrollY > 50) {
+                header.className = "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-glass-heavy shadow-md py-3";
+                logoImg.classList.remove('brightness-0', 'invert');
+                logoText.className = "ml-3 font-heading font-extrabold text-lg sm:text-xl tracking-wider text-primary transition-all duration-300";
+                
+                navBtns.forEach(btn => {
+                    btn.classList.remove('text-slate-200');
+                    btn.classList.add('text-slate-800');
+                });
+                
+                langSwitcher.classList.remove('text-slate-200');
+                langSwitcher.classList.add('text-slate-700');
+                
+                mobileMenuBtn.classList.remove('text-slate-350', 'bg-white/5', 'border-white/10');
+                mobileMenuBtn.classList.add('text-slate-800', 'bg-slate-100', 'border-slate-200');
+            } else {
+                header.className = "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gradient-to-b from-black/60 to-transparent py-5";
+                logoImg.classList.add('brightness-0', 'invert');
+                logoText.className = "ml-3 font-heading font-extrabold text-lg sm:text-xl tracking-wider text-gradient-green transition-all duration-300";
+                
+                navBtns.forEach(btn => {
+                    btn.classList.remove('text-slate-800');
+                    btn.classList.add('text-slate-200');
+                });
+                
+                langSwitcher.classList.remove('text-slate-700');
+                langSwitcher.classList.add('text-slate-200');
+                
+                mobileMenuBtn.classList.remove('text-slate-800', 'bg-slate-100', 'border-slate-200');
+                mobileMenuBtn.classList.add('text-slate-350', 'bg-white/5', 'border-white/10');
+            }
+        });
+
+        // Translation dictionary
+        const translations = {
+            vi: {
+                "nav.about": "Giới thiệu",
+                "nav.products": "Sản phẩm",
+                "nav.solutions": "Giải pháp",
+                "nav.esg": "Phát triển bền vững",
+                "nav.news": "Tin tức",
+                "nav.contact": "Liên hệ",
+                "hero.slide1_title": "Kiến Tạo Tương Lai Nhôm Công Nghệ Cao",
+                "hero.slide1_sub": "Nhà máy nhôm EcoAlu tại Thanh Hóa - Trực tiếp hướng tới kinh tế tuần hoàn và sản xuất xanh bền vững.",
+                "hero.slide2_title": "Công Nghệ Hiện Đại - Tiêu Chuẩn Quốc Tế",
+                "hero.slide2_sub": "Dây chuyền công nghệ ZheLu Technology kết hợp Robot ABB và lò kép hiện đại giúp tiết kiệm 20% năng lượng.",
+                "hero.slide3_title": "Bao Tiêu Sản Lượng - Hợp Tác Bền Vững",
+                "hero.slide3_sub": "100.000 tấn/năm đã được cam kết bao tiêu bởi các đối tác hàng đầu trong và ngoài nước.",
+                "hero.cta": "Nhận tư vấn ngay",
+                "about.title": "Về Chúng Tôi",
+                "about.intro_p1": "Thế giới đang đứng trước bước ngoặt lớn khi chuyển dịch sang mô hình kinh tế tuần hoàn. Tại đó, ngành tái chế kim loại không đơn thuần là hoạt động công nghiệp, mà là chìa khóa để bảo tồn tài nguyên và kiến tạo tương lai xanh cho hành tinh.",
+                "about.intro_p2": "Nhận thức rõ nhu cầu nhôm kỹ thuật cao đang bùng nổ phục vụ hạ tầng, hàng không và linh kiện điện tử, cùng sự thiếu hụt các đơn vị sản xuất quy mô tầm cỡ, nhà máy Nhôm công nghệ cao ECOALU tại Thanh Hóa ra đời với sứ mệnh xác lập vị thế mới trên bản đồ công nghiệp nhôm quốc gia.",
+                "about.intro_p3": "Được đầu tư bài bản trên nền tảng khảo sát các mô hình sản xuất hàng đầu thế giới, EcoAlu tập trung vào dòng sản phẩm chiến lược Ingot và Billet nhôm đạt chuẩn quốc tế khắt khe...",
+                "about.vision_mission": "Tầm Nhìn & Sứ Mệnh",
+                "about.sub1": "Sản xuất nhôm xanh công nghệ cao.",
+                "about.board": "Hội Đồng Quản Trị",
+                "about.sub2": "Đội ngũ giàu kinh nghiệm quốc tế.",
+                "about.philosophy": "Triết Lý Kinh Doanh",
+                "about.sub3": "Phát triển dựa trên R&D bền vững.",
+                "about.history": "Lịch Sử Phát Triển",
+                "about.sub4": "Hành trình khẳng định nhôm Việt.",
+                "stats.investment": "Tổng vốn đầu tư",
+                "stats.investment_desc": "980 Tỷ VNĐ (~37 Triệu USD)",
+                "stats.capacity": "Năng lực sản xuất",
+                "stats.capacity_desc": "100.000 tấn nhôm thỏi & thanh/năm",
+                "stats.area": "Quy hoạch diện tích",
+                "stats.area_desc": "103.621 m2 với 20.700 m2 mảng xanh",
+                "stats.efficiency": "Hiệu suất công nghệ",
+                "stats.efficiency_desc": "Đạt ngưỡng 96-98% vận hành thông minh",
+                "logistics.title": "Lợi Thế Vị Trí & Logistics",
+                "logistics.subtitle": "Cửa ngõ kết nối giao thương trong nước & quốc tế",
+                "logistics.desc": "Tọa lạc tại Lô CN-05, Cụm công nghiệp Hợp Thắng, Triệu Sơn, Thanh Hóa. Nhà máy nằm tại cửa ngõ hạ tầng kết nối khu vực và quốc tế, tối ưu hóa tối đa chi phí logistics đầu vào và đầu ra.",
+                "logistics.port": "Cách Cảng Nghi Sơn",
+                "logistics.airport": "Cách Sân Bay Thọ Xuân",
+                "logistics.city": "Cách TP. Thanh Hóa",
+                "logistics.route_title": "Tuyến đường nguyên liệu huyết mạch",
+                "logistics.route_desc": "Kết nối trực tiếp thông qua tuyến Cửa khẩu Cầu Treo (Hà Tĩnh) - Lào và các nước tiểu vùng sông Mê Kông...",
+                "products_sec.title": "Sản Phẩm Của Chúng Tôi",
+                "products_sec.capacity_label": "Công suất:",
+                "prod1.name": "Nhôm Thỏi (Ingot)",
+                "prod1.desc": "Sản phẩm nhôm thỏi cao cấp phục vụ đúc hợp kim.",
+                "prod1.capacity": "30.000 tấn/năm",
+                "prod2.name": "Nhôm Billet",
+                "prod2.desc": "Thanh nhôm tròn chất lượng cao phục vụ đùn ép.",
+                "prod2.capacity": "70.000 tấn/năm",
+                "prod3.name": "Nhôm Định Hình",
+                "prod3.desc": "Các hệ thanh nhôm định hình cao cấp.",
+                "prod3.capacity": "15.000 tấn/năm",
+                "esg_sec.title": "Phát Triển Bền Vững (ESG)",
+                "esg_sec.env_title": "Môi Trường (E)",
+                "esg_sec.env_desc": "Tiết kiệm 20% năng lượng nhờ tích hợp công nghệ lò kép thế hệ mới. Thiết lập 20.700 m2 diện tích cây xanh nội khu.",
+                "esg_sec.soc_title": "Xã Hội (S)",
+                "esg_sec.soc_desc": "Tạo việc làm cho hơn 120 lao động kỹ thuật cao tại địa phương.",
+                "esg_sec.gov_title": "Quản Trị (G)",
+                "esg_sec.gov_desc": "Vận hành thông minh tích hợp trên nền tảng PLC Siemens, Mitsubishi, ERP, MES...",
+                "contact_sec.title": "Liên Hệ Hợp Tác",
+                "contact_sec.branch_hn": "Trụ sở chính",
+                "contact_sec.branch_factory": "Nhà máy Thanh Hóa",
+                "contact_sec.form_name": "Họ và tên *",
+                "contact_sec.form_phone": "Số điện thoại *",
+                "contact_sec.form_message": "Nội dung lời nhắn *",
+                "contact_sec.form_submit": "Gửi thông tin",
+                "partners.title_metal": "Đối tác bao tiêu & Khách hàng đầu ngành",
+                "partners.title_banks": "Tài trợ tài chính & Ngân hàng liên kết"
+            },
+            en: {
+                "nav.about": "About Us",
+                "nav.products": "Products",
+                "nav.solutions": "Solutions",
+                "nav.esg": "Sustainability",
+                "nav.news": "News",
+                "nav.contact": "Contact",
+                "hero.slide1_title": "Shaping the Future of High-Tech Aluminum",
+                "hero.slide1_sub": "EcoAlu factory in Thanh Hoa - Steering directly toward a circular economy and green manufacturing.",
+                "hero.slide2_title": "Modern Technology - International Standards",
+                "hero.slide2_sub": "ZheLu Technology combined with ABB Robots and advanced double furnaces saves 20% of energy.",
+                "hero.slide3_title": "Guaranteed Offtake - Sustainable Partnership",
+                "hero.slide3_sub": "100,000 tons/year fully committed for offtake by top domestic and international partners.",
+                "hero.cta": "Get Consultation",
+                "about.title": "About EcoAlu",
+                "about.intro_p1": "The world stands at a turning point in transitioning to a circular economy model. Metal recycling is no longer just an industrial activity, but the key to resource conservation and creating a green future.",
+                "about.intro_p2": "Recognizing the booming demand for high-tech aluminum in infrastructure, aviation, and electronics, and the gap in large-scale producers, the ECOALU High-Tech Aluminum factory in Thanh Hoa was born...",
+                "about.intro_p3": "Constructed on the foundation of researching leading manufacturing models worldwide, EcoAlu focuses on strategic, internationally certified Aluminum Ingot and Billet...",
+                "about.vision_mission": "Vision & Mission",
+                "about.sub1": "Produce high-tech green aluminum.",
+                "about.board": "Board of Directors",
+                "about.sub2": "Experienced board with global insight.",
+                "about.philosophy": "Business Philosophy",
+                "about.sub3": "R&D and green practices driven.",
+                "about.history": "Development History",
+                "about.sub4": "Cemet Vietnamese aluminum globally.",
+                "stats.investment": "Total Investment",
+                "stats.investment_desc": "980 Billion VND (~$37M USD)",
+                "stats.capacity": "Production Capacity",
+                "stats.capacity_desc": "100,000 tons of ingot & billet/year",
+                "stats.area": "Total Area Layout",
+                "stats.area_desc": "103,621 m2 with 20,700 m2 green space",
+                "stats.efficiency": "Tech Performance",
+                "stats.efficiency_desc": "96% - 98% smart operation efficiency",
+                "logistics.title": "Location & Logistics",
+                "logistics.subtitle": "The Gateway for Domestic & Global Commerce",
+                "logistics.desc": "Located at Lot CN-05, Hop Thang Industrial Cluster, Trieu Son, Thanh Hoa. The factory optimizes both inbound and outbound logistics costs.",
+                "logistics.port": "To Nghi Son Int'l Port",
+                "logistics.airport": "To Tho Xuan Airport",
+                "logistics.city": "To Thanh Hoa City Center",
+                "logistics.route_title": "Key Raw Material Route",
+                "logistics.route_desc": "Directly connected via Cau Treo Border Gate (Ha Tinh) to Laos and Mekong river subregion...",
+                "products_sec.title": "Our Products",
+                "products_sec.capacity_label": "Capacity:",
+                "prod1.name": "Aluminum Ingot",
+                "prod1.desc": "Premium aluminum ingot products for alloy casting.",
+                "prod1.capacity": "30,000 tons/year",
+                "prod2.name": "Aluminum Billet",
+                "prod2.desc": "High-quality round billet bars for extrusion.",
+                "prod2.capacity": "70,000 tons/year",
+                "prod3.name": "Aluminum Profiles",
+                "prod3.desc": "Premium extruded profiles for construction.",
+                "prod3.capacity": "15,000 tons/year",
+                "esg_sec.title": "Sustainability (ESG)",
+                "esg_sec.env_title": "Environment (E)",
+                "esg_sec.env_desc": "Save 20% energy via new double furnaces. Establish 20,700 m2 of internal green space.",
+                "esg_sec.soc_title": "Social (S)",
+                "esg_sec.soc_desc": "Create jobs for over 120 highly skilled local workers.",
+                "esg_sec.gov_title": "Governance (G)",
+                "esg_sec.gov_desc": "Smart operations integrated via Siemens & Mitsubishi PLCs, ERP, MES...",
+                "contact_sec.title": "Contact Us",
+                "contact_sec.branch_hn": "Headquarters",
+                "contact_sec.branch_factory": "Thanh Hoa Factory",
+                "contact_sec.form_name": "Full Name *",
+                "contact_sec.form_phone": "Phone Number *",
+                "contact_sec.form_message": "Message Content *",
+                "contact_sec.form_submit": "Submit",
+                "partners.title_metal": "Offtake Partners & Industry Leaders",
+                "partners.title_banks": "Financial Institutions & Linked Banks"
+            },
+            cn: {
+                "nav.about": "关于我们",
+                "nav.products": "产品中心",
+                "nav.solutions": "解决方案",
+                "nav.esg": "可持续发展",
+                "nav.news": "新闻动态",
+                "nav.contact": "联系我们",
+                "hero.slide1_title": "铸就高科技铝业的未来",
+                "hero.slide1_sub": "位于清化省的EcoAlu工厂 - 直接迈向循环经济与可持续绿色生产。",
+                "hero.slide2_title": "现代技术 - 国际标准",
+                "hero.slide2_sub": "哲鲁技术与ABB机器人及先进双室炉相结合，可节能20%。",
+                "hero.slide3_title": "包销产量 - 可持续合作",
+                "hero.slide3_sub": "国内外领先合作伙伴已承诺包销年产10万吨。",
+                "hero.cta": "立即获取咨询",
+                "about.title": "关于我们",
+                "about.intro_p1": "世界正处于向循环经济模式转型的重大转折点。金属回收不仅是一项工业 activity, 更是保护资源 and 为地球创造绿色未来的关键。",
+                "about.intro_p2": "认识到基础设施、航空和电子领域对高科技铝材的蓬勃需求，以及大型生产商的推迟...",
+                "about.intro_p3": "EcoAlu在调研全球领先生产模式的基础上进行系统化投资，专注于铝锭 and 铝圆棒...",
+                "about.vision_mission": "愿景与使命",
+                "about.sub1": "生产高科技绿色铝材。",
+                "about.board": "董事会",
+                "about.sub2": "拥有丰富国际经验的管理团队。",
+                "about.philosophy": "经营理念",
+                "about.sub3": "注重可持续研发与绿色实践。",
+                "about.history": "发展历史",
+                "about.sub4": "确立越南铝业在全球的地位。",
+                "stats.investment": "总投资额",
+                "stats.investment_desc": "9800亿越盾 (~3700万美元)",
+                "stats.capacity": "生产能力",
+                "stats.capacity_desc": "年产10万吨铝锭和铝圆棒",
+                "stats.area": "总规划面积",
+                "stats.area_desc": "103,621平方米，含20,700㎡绿化",
+                "stats.efficiency": "技术性能",
+                "stats.efficiency_desc": "达到96% - 98%的智能运行效率",
+                "logistics.title": "地理位置与物流",
+                "logistics.subtitle": "国内和国际贸易的门户",
+                "logistics.desc": "位于清化省合胜工业区。该工厂优化了进出口物流成本。",
+                "logistics.port": "距离宜山国际港",
+                "logistics.airport": "距离寿春机场",
+                "logistics.city": "距离清化市中心",
+                "logistics.route_title": "原材料核心物流路线",
+                "logistics.route_desc": "通过吊桥关（河静）与老挝及湄公河次区域直接相连...",
+                "products_sec.title": "我们的产品",
+                "products_sec.capacity_label": "产能:",
+                "prod1.name": "铝锭 (Ingot)",
+                "prod1.desc": "用于铸造和合金制造的优质铝锭。",
+                "prod1.capacity": "30,000 吨/年",
+                "prod2.name": "铝圆棒 (Billet)",
+                "prod2.desc": "高质量预铸铝圆棒，用于挤压工艺。",
+                "prod2.capacity": "70,000 吨/年",
+                "prod3.name": "铝型材 (Profile)",
+                "prod3.desc": "用于建筑与工业的优质铝型材。",
+                "prod3.capacity": "15,000 吨/年",
+                "esg_sec.title": "可持续发展 (ESG)",
+                "esg_sec.env_title": "环境 (E)",
+                "esg_sec.env_desc": "集成新一代双室炉节能20%。内部绿化达20,700平方米。",
+                "esg_sec.soc_title": "社会 (S)",
+                "esg_sec.soc_desc": "为当地120多名高技能人才创造稳定就业。",
+                "esg_sec.gov_title": "公司治理 (G)",
+                "esg_sec.gov_desc": "基于西门子、三菱PLC、ERP、MES和物联网智能运行。",
+                "contact_sec.title": "联系我们",
+                "contact_sec.branch_hn": "总部",
+                "contact_sec.branch_factory": "清化工厂",
+                "contact_sec.form_name": "姓名 *",
+                "contact_sec.form_phone": "电话号码 *",
+                "contact_sec.form_message": "留言内容 *",
+                "contact_sec.form_submit": "提交信息",
+                "partners.title_metal": "包销合作伙伴与行业领导者",
+                "partners.title_banks": "金融机构与合作银行"
+            }
+        };
+
+        // Current active language
+        let currentLang = 'vi';
+
+        // Function to switch language
+        function changeLanguage(lang) {
+            currentLang = lang;
+            
+            // Highlight active button
+            ['vi', 'en', 'cn'].forEach(l => {
+                const btn = document.getElementById('lang-' + l);
+                if (btn) {
+                    if (l === lang) {
+                        btn.className = "text-xs font-bold px-2 py-1 rounded bg-primary text-white shadow";
+                    } else {
+                        btn.className = "text-xs font-bold px-2 py-1 rounded text-slate-450 hover:text-slate-200";
+                    }
+                }
+            });
+
+            // Update all elements with data-lang-key attribute
+            const elements = document.querySelectorAll('[data-lang-key]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-lang-key');
+                if (key && translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+        }
+    </script>
+</body>
+</html>
