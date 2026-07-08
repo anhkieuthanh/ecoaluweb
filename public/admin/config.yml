@@ -1,7 +1,7 @@
 local_backend: false
 backend:
   name: github
-  repo: atif/Ecoalu_web # Thay đổi thành "username/repository-name" của bạn trên GitHub
+  repo: anhkieuthanh/ecoaluweb # Thay đổi thành "username/repository-name" của bạn trên GitHub
   branch: main
 
 # Nơi chứa ảnh do người dùng đăng tải từ Dashboard
