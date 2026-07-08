@@ -3,7 +3,8 @@ backend:
   name: github
   repo: anhkieuthanh/ecoaluweb # Thay đổi thành "username/repository-name" của bạn trên GitHub
   branch: main
-  auth_endpoint: /admin/auth.php
+  base_url: https://ecoalu.net
+  auth_endpoint: admin/auth.php
 
 # Nơi chứa ảnh do người dùng đăng tải từ Dashboard
 media_folder: "public/images/uploads"
