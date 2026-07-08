@@ -10,8 +10,8 @@
 // GitHub -> Settings -> Developer Settings -> OAuth Apps -> New OAuth App
 // - Homepage URL: https://yourdomain.com
 // - Authorization callback URL: https://yourdomain.com/admin/auth.php
-define('CLIENT_ID', 'GHI_CLIENT_ID_CỦA_BẠN_VÀO_ĐÂY');
-define('CLIENT_SECRET', 'GHI_CLIENT_SECRET_CỦA_BẠN_VÀO_ĐÂY');
+define('CLIENT_ID', 'Ov23lidDmC1amFQpBk5D');
+define('CLIENT_SECRET', '10b45107b200219468417b73f004f9049fb15b28');
 
 // Bắt đầu Session để lưu trữ state bảo mật
 session_start();

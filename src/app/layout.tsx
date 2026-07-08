@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   title: "EcoAlu - Nhà Máy Nhôm Công Nghệ Cao | Tầm Vóc Việt",
   description: "Dự án nhà máy Nhôm công nghệ cao ECOALU tại Thanh Hóa - Giải pháp cung ứng nhôm Ingot, Billet chất lượng cao hướng tới kinh tế tuần hoàn.",
   keywords: "EcoAlu, nhôm công nghệ cao, nhôm ingot, nhôm billet, nhôm tái chế, kinh tế tuần hoàn, Thanh Hóa",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
