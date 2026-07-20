@@ -19,12 +19,12 @@
                 extend: {
                     colors: {
                         primary: {
-                            dark: '#f8fafc',
+                            dark: '#01241b',
                             DEFAULT: '#059669',
-                            light: '#eefaf2',
+                            light: '#f4faf6',
                         },
                         accent: {
-                            green: '#10B981',
+                            green: '#10b981',
                             'green-dark': '#047857',
                         }
                     },
@@ -45,7 +45,7 @@
             -webkit-font-smoothing: antialiased;
         }
         h2 {
-            color: #047857;
+            color: #059669;
         }
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Montserrat', sans-serif;
@@ -84,7 +84,7 @@
             cursor: pointer;
         }
         .custom-swiper-bullet-active {
-            background-color: #10B981 !important;
+            background-color: #10b981 !important;
             width: 48px !important;
             box-shadow: 0 0 8px rgba(16, 185, 129, 0.5) !important;
         }
@@ -360,34 +360,34 @@
 
                                     <!-- Connecting lines -->
                                     <path d="M 80,180 Q 145,160 210,180" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4,4" />
-                                    <path d="M 210,180 L 285,155" stroke="#10b981" strokeWidth="3" />
+                                    <path d="M 210,180 L 285,155" class="stroke-accent-green" strokeWidth="3" />
                                     <path d="M 350,60 L 350,130" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="3,3" />
-                                    <path d="M 415,155 L 470,240" stroke="#059669" strokeWidth="3" />
-                                    <path d="M 470,240 Q 515,220 560,180" stroke="#047857" strokeWidth="2.5" strokeDasharray="6,4" />
+                                    <path d="M 415,155 L 470,240" class="stroke-primary" strokeWidth="3" />
+                                    <path d="M 470,240 Q 515,220 560,180" class="stroke-accent-green-dark" strokeWidth="2.5" strokeDasharray="6,4" />
 
                                     <!-- Nodes & Labels -->
                                     <circle cx="80" cy="180" r="6" fill="#64748b" />
                                     <circle cx="80" cy="180" r="12" stroke="#64748b" strokeWidth="1" strokeOpacity="0.5" class="animate-ping" />
                                     <text x="80" y="208" text-anchor="middle" fill="#475569" fontSize="9" fontWeight="bold">LAOS (LÀO)</text>
 
-                                    <circle cx="210" cy="180" r="6" fill="#059669" />
+                                    <circle cx="210" cy="180" r="6" class="fill-primary" />
                                     <text x="210" y="208" text-anchor="middle" fill="#475569" fontSize="9" fontWeight="bold">CỬA KHẨU CẦU TREO</text>
 
                                     <g>
-                                        <rect x="285" y="130" width="130" height="50" rx="8" fill="#eefaf2" stroke="#059669" strokeWidth="2" />
-                                        <text x="350" y="149" text-anchor="middle" fill="#047857" fontSize="10" fontWeight="bold">NHÀ MÁY ECOALU</text>
-                                        <text x="350" y="165" text-anchor="middle" fill="#059669" fontSize="8" fontWeight="bold">TRIỆU SƠN, THANH HÓA</text>
+                                        <rect x="285" y="130" width="130" height="50" rx="8" class="fill-primary-light stroke-primary" strokeWidth="2" />
+                                        <text x="350" y="149" text-anchor="middle" class="fill-accent-green-dark" fontSize="10" fontWeight="bold">NHÀ MÁY ECOALU</text>
+                                        <text x="350" y="165" text-anchor="middle" class="fill-primary" fontSize="8" fontWeight="bold">TRIỆU SƠN, THANH HÓA</text>
                                     </g>
 
                                     <circle cx="350" cy="60" r="5" fill="#64748b" />
                                     <text x="350" y="46" text-anchor="middle" fill="#475569" fontSize="9" fontWeight="semibold">SÂN BAY THỌ XUÂN (18km)</text>
 
-                                    <circle cx="470" cy="240" r="5" fill="#059669" />
+                                    <circle cx="470" cy="240" r="5" class="fill-primary" />
                                     <text x="470" y="265" text-anchor="middle" fill="#475569" fontSize="9" fontWeight="semibold">CẢNG NGHI SƠN (60km)</text>
 
-                                    <circle cx="560" cy="180" r="6" fill="#047857" />
-                                    <circle cx="560" cy="180" r="12" stroke="#047857" strokeWidth="1" strokeOpacity="0.5" class="animate-ping" />
-                                    <text x="560" y="208" text-anchor="middle" fill="#047857" fontSize="9" fontWeight="bold">EXPORT (MỸ, EU, NHẬT...)</text>
+                                    <circle cx="560" cy="180" r="6" class="fill-accent-green-dark" />
+                                    <circle cx="560" cy="180" r="12" strokeWidth="1" strokeOpacity="0.5" class="animate-ping stroke-accent-green-dark" />
+                                    <text x="560" y="208" text-anchor="middle" class="fill-accent-green-dark" fontSize="9" fontWeight="bold">EXPORT (MỸ, EU, NHẬT...)</text>
                                 </svg>
 
                                 <!-- Badge Overlay -->
