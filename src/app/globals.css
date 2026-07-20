@@ -4,7 +4,7 @@
   --color-primary-dark: #01241b; /* Deep Solid Forest Black */
   --color-primary: #059669; /* Fresh Vibrant Emerald Green */
   --color-primary-light: #f4faf6; /* Fresh light solid mint background */
-  --color-accent-green: #10B981; /* Bright Green */
+  --color-accent-green: #10b981; /* Bright Green */
   --color-accent-green-dark: #047857; /* Emerald Green */
   --font-sans: var(--font-roboto), sans-serif;
   --font-heading: var(--font-montserrat), sans-serif;
@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient-green {
-  background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+  background: linear-gradient(135deg, var(--color-accent-green) 0%, var(--color-primary) 50%, var(--color-accent-green-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -60,5 +60,5 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #059669;
+  background: var(--color-primary);
 }
