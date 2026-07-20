@@ -48,6 +48,7 @@ export default function Footer() {
                 alt="EcoAlu Logo"
                 width={120}
                 height={40}
+                style={{ width: 'auto', height: 'auto' }}
                 className="h-10 w-auto object-contain brightness-0 invert"
               />
               <span className="ml-3 font-heading font-extrabold text-xl tracking-wider text-white group-hover:text-accent-green transition-colors">
