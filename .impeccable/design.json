@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-20T00:00:00.000Z",
+  "title": "Design System: EcoAlu",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Emerald Authority",
+        "canonical": "#059669",
+        "tonalRamp": ["#012e1d", "#024a2e", "#036640", "#047857", "#059669", "#10b981", "#34d399", "#6ee7b7", "#a7f3d0", "#d1fae5"]
+      },
+      "accent-vivid": {
+        "role": "primary",
+        "displayName": "Vivid Emerald",
+        "canonical": "#10b981",
+        "tonalRamp": ["#022c1e", "#024e35", "#037a51", "#059669", "#10b981", "#34d399", "#6ee7b7", "#a7f3d0", "#d1fae5", "#ecfdf5"]
+      },
+      "accent-deep": {
+        "role": "primary",
+        "displayName": "Deep Emerald",
+        "canonical": "#047857",
+        "tonalRamp": ["#012419", "#023d2a", "#03573c", "#047857", "#059669", "#10b981", "#34d399", "#6ee7b7", "#a7f3d0", "#d1fae5"]
+      },
+      "page-shell": {
+        "role": "neutral",
+        "displayName": "Page Shell",
+        "canonical": "#041221",
+        "tonalRamp": ["#020912", "#041221", "#071e38", "#0a2a4f", "#0d3664", "#1a4d8f", "#2d6dbf", "#5b9be2", "#93c5fd", "#dbeafe"]
+      },
+      "primary-forest": {
+        "role": "neutral",
+        "displayName": "Primary Forest",
+        "canonical": "#01241b",
+        "tonalRamp": ["#010f0b", "#01241b", "#023c2d", "#035440", "#046853", "#058066", "#10b981", "#34d399", "#a7f3d0", "#ecfdf5"]
+      },
+      "forest-void": {
+        "role": "neutral",
+        "displayName": "Forest Void",
+        "canonical": "#011a13",
+        "tonalRamp": ["#000a07", "#011a13", "#022b1f", "#033c2b", "#044d36", "#066647", "#07805a", "#10b981", "#6ee7b7", "#d1fae5"]
+      },
+      "mint-surface": {
+        "role": "neutral",
+        "displayName": "Mint Surface",
+        "canonical": "#f4faf6",
+        "tonalRamp": ["#02291c", "#044d35", "#07805a", "#059669", "#10b981", "#6ee7b7", "#a7f3d0", "#d1fae5", "#ecfdf5", "#f4faf6"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Pure White",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#f0f0f0", "#e8e8e8", "#d9d9d9", "#c4c4c4", "#a8a8a8", "#888888", "#555555", "#333333", "#1a1a1a", "#000000"]
+      },
+      "ink-primary": {
+        "role": "neutral",
+        "displayName": "Dark Slate",
+        "canonical": "#1e293b",
+        "tonalRamp": ["#0f172a", "#1e293b", "#334155", "#475569", "#64748b", "#94a3b8", "#cbd5e1", "#e2e8f0", "#f1f5f9", "#f8fafc"]
+      },
+      "ink-secondary": {
+        "role": "neutral",
+        "displayName": "Secondary Text",
+        "canonical": "#475569",
+        "tonalRamp": ["#0f172a", "#1e293b", "#334155", "#475569", "#64748b", "#94a3b8", "#cbd5e1", "#e2e8f0", "#f1f5f9", "#f8fafc"]
+      },
+      "surface-subtle": {
+        "role": "neutral",
+        "displayName": "Surface Subtle",
+        "canonical": "#f8fafc",
+        "tonalRamp": ["#1e293b", "#334155", "#475569", "#64748b", "#94a3b8", "#cbd5e1", "#e2e8f0", "#f1f5f9", "#f8fafc", "#ffffff"]
+      },
+      "border-default": {
+        "role": "neutral",
+        "displayName": "Border Default",
+        "canonical": "#e2e8f0",
+        "tonalRamp": ["#1e293b", "#334155", "#475569", "#64748b", "#94a3b8", "#cbd5e1", "#e2e8f0", "#f1f5f9", "#f8fafc", "#ffffff"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Hero Display", "purpose": "Hero slider titles only. One per slide." },
+      "headline": { "displayName": "Section Headline", "purpose": "Section <h2> headings. Always uppercase, tracked, with emerald underline rule." },
+      "title": { "displayName": "Card Title", "purpose": "Card headings, subsection labels, branch names." },
+      "body": { "displayName": "Body Copy", "purpose": "Prose, descriptions, card copy. Max 65–75ch on desktop." },
+      "label": { "displayName": "Label / Tag", "purpose": "Field labels, category tags, ALL CAPS metadata." }
+    },
+    "shadows": [
+      {
+        "name": "resting-card",
+        "value": "0 1px 3px rgba(0,0,0,0.05)",
+        "purpose": "Standard card surface (bg-glass) — barely perceptible separation from white background."
+      },
+      {
+        "name": "heavy-container",
+        "value": "0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03)",
+        "purpose": "Major form containers and info panels (bg-glass-heavy)."
+      },
+      {
+        "name": "button-lift-rest",
+        "value": "0 4px 6px -1px rgba(5,150,105,0.2)",
+        "purpose": "Primary button at rest — colored shadow in brand hue (shadow-primary/20)."
+      },
+      {
+        "name": "button-lift-hover",
+        "value": "0 10px 15px -3px rgba(5,150,105,0.4)",
+        "purpose": "Primary button hover state — deeper colored shadow (shadow-primary/40)."
+      },
+      {
+        "name": "elevated-drawer",
+        "value": "0 25px 50px rgba(0,0,0,0.25)",
+        "purpose": "Mobile nav drawer and overlay panels. Overlay contexts only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Default easing for state transitions (color, opacity, border)."
+      },
+      {
+        "name": "ease-out-quart",
+        "value": "cubic-bezier(0.25, 1, 0.5, 1)",
+        "purpose": "Entrance animations and scroll reveals — used by Framer Motion fade-up."
+      },
+      {
+        "name": "duration-fast",
+        "value": "150ms",
+        "purpose": "Micro-interactions: button color, border focus shift."
+      },
+      {
+        "name": "duration-standard",
+        "value": "300ms",
+        "purpose": "Component transitions: nav scroll state, card hover, drawer slide."
+      },
+      {
+        "name": "duration-reveal",
+        "value": "600–800ms",
+        "purpose": "Section entrance animations (Framer Motion whileInView). Stagger: 0.2s per item."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (Hero CTA)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main action button. Appears in hero section and as primary CTA throughout.",
+      "html": "<button class=\"ds-btn-primary\"><span>Liên Hệ Ngay</span><svg class=\"ds-btn-icon\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"/></svg></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: #059669; color: #ffffff; padding: 14px 32px; border-radius: 6px; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 0.875rem; letter-spacing: 0.05em; border: none; cursor: pointer; box-shadow: 0 4px 6px -1px rgba(5,150,105,0.2); transition: background-color 300ms ease, transform 200ms ease, box-shadow 300ms ease; } .ds-btn-primary:hover { background-color: #047857; transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(5,150,105,0.4); } .ds-btn-primary:active { transform: translateY(0); } .ds-btn-primary:focus-visible { outline: 2px solid #059669; outline-offset: 3px; } .ds-btn-icon { transition: transform 300ms ease; } .ds-btn-primary:hover .ds-btn-icon { transform: translateX(4px); } @media (prefers-reduced-motion: reduce) { .ds-btn-primary { transition: background-color 150ms; } .ds-btn-primary:hover { transform: none; } }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action. Transparent fill with emerald border. Appears alongside primary CTA.",
+      "html": "<button class=\"ds-btn-ghost\">Xem Sản Phẩm</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: #059669; border: 1.5px solid #059669; padding: 14px 32px; border-radius: 6px; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 0.875rem; letter-spacing: 0.05em; cursor: pointer; transition: background-color 200ms ease, color 200ms ease; } .ds-btn-ghost:hover { background-color: #f4faf6; } .ds-btn-ghost:focus-visible { outline: 2px solid #059669; outline-offset: 3px; }"
+    },
+    {
+      "name": "Language Switcher Tab",
+      "kind": "chip",
+      "refersTo": "button-primary",
+      "description": "VI / EN / CN language toggle. Active tab: emerald fill. Inactive: transparent with slate text.",
+      "html": "<div class=\"ds-lang-group\"><button class=\"ds-lang-tab ds-lang-tab--active\">VI</button><button class=\"ds-lang-tab\">EN</button><button class=\"ds-lang-tab\">CN</button></div>",
+      "css": ".ds-lang-group { display: inline-flex; gap: 2px; padding: 4px; background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 6px; } .ds-lang-tab { padding: 4px 8px; border-radius: 4px; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 0.625rem; letter-spacing: 0.05em; border: none; cursor: pointer; background: transparent; color: #64748b; transition: background-color 150ms, color 150ms; } .ds-lang-tab:hover { color: #059669; } .ds-lang-tab--active { background: #059669; color: #ffffff; box-shadow: 0 1px 2px rgba(0,0,0,0.1); } .ds-lang-tab:focus-visible { outline: 2px solid #059669; outline-offset: 2px; }"
+    },
+    {
+      "name": "Contact Info Card",
+      "kind": "card",
+      "refersTo": "contact-card",
+      "description": "Hotline / email card on the Contact section. Icon container + label + value.",
+      "html": "<a class=\"ds-contact-card\" href=\"tel:+84123456789\"><div class=\"ds-contact-icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z\"/></svg></div><div class=\"ds-contact-info\"><span class=\"ds-contact-label\">Hotline</span><span class=\"ds-contact-value\">+84 (0) 123 456 789</span></div></a>",
+      "css": ".ds-contact-card { display: flex; align-items: center; gap: 14px; padding: 16px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); text-decoration: none; transition: border-color 300ms ease, box-shadow 200ms ease; cursor: pointer; } .ds-contact-card:hover { border-color: rgba(5,150,105,0.2); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07); } .ds-contact-icon { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #f4faf6; color: #059669; border-radius: 8px; flex-shrink: 0; } .ds-contact-info { display: flex; flex-direction: column; } .ds-contact-label { font-family: Roboto, sans-serif; font-size: 0.625rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; } .ds-contact-value { font-family: Roboto, sans-serif; font-size: 0.875rem; font-weight: 600; color: #1e293b; margin-top: 2px; }"
+    },
+    {
+      "name": "Form Input",
+      "kind": "input",
+      "refersTo": "form-input",
+      "description": "Standard text input. Subtle fill at rest, white on focus with emerald border.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field-label\" for=\"ds-input-name\">Họ và Tên</label><input class=\"ds-field-input\" id=\"ds-input-name\" type=\"text\" placeholder=\"Nguyễn Văn A\" /></div>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 6px; } .ds-field-label { font-family: Roboto, sans-serif; font-size: 0.625rem; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.08em; } .ds-field-input { width: 100%; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px 16px; font-family: Roboto, sans-serif; font-size: 0.875rem; color: #1e293b; outline: none; transition: border-color 150ms ease, background-color 150ms ease; } .ds-field-input::placeholder { color: #94a3b8; } .ds-field-input:focus { border-color: #059669; background: #ffffff; } .ds-field-input:disabled { background: #f1f5f9; color: #94a3b8; cursor: not-allowed; }"
+    },
+    {
+      "name": "Section Heading with Anchor Rule",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Signature section heading: uppercase Montserrat + centered 4px emerald underline bar. Used on every major section.",
+      "html": "<div class=\"ds-section-header\"><h2 class=\"ds-section-title\">Sản Phẩm Của Chúng Tôi</h2><div class=\"ds-section-rule\"></div></div>",
+      "css": ".ds-section-header { text-align: center; margin-bottom: 64px; } .ds-section-title { font-family: Montserrat, sans-serif; font-size: clamp(1.875rem, 4vw, 2.25rem); font-weight: 700; color: #059669; letter-spacing: 0.05em; text-transform: uppercase; } .ds-section-rule { width: 64px; height: 4px; background: #059669; border-radius: 9999px; margin: 16px auto 0; }"
+    },
+    {
+      "name": "Navigation Bar (Scrolled State)",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Site nav after scroll threshold. White background, border, shadow. Transparent on load.",
+      "html": "<nav class=\"ds-nav ds-nav--solid\"><div class=\"ds-nav-inner\"><div class=\"ds-nav-logo\"><div class=\"ds-logo-mark\"></div><span class=\"ds-logo-text\">EcoAlu</span></div><div class=\"ds-nav-links\"><a class=\"ds-nav-link\" href=\"#about\">Giới thiệu</a><a class=\"ds-nav-link\" href=\"#products\">Sản phẩm</a><a class=\"ds-nav-link\" href=\"#contact\">Liên hệ</a></div></div></nav>",
+      "css": ".ds-nav { width: 100%; position: sticky; top: 0; z-index: 50; transition: background 300ms ease, box-shadow 300ms ease; } .ds-nav--solid { background: rgba(255,255,255,0.95); border-bottom: 1px solid #f1f5f9; box-shadow: 0 1px 3px rgba(0,0,0,0.05); } .ds-nav--transparent { background: transparent; } .ds-nav-inner { max-width: 1280px; margin: 0 auto; padding: 12px 32px; display: flex; align-items: center; justify-content: space-between; } .ds-nav-logo { display: flex; align-items: center; gap: 12px; } .ds-logo-mark { width: 32px; height: 32px; background: #059669; border-radius: 6px; } .ds-logo-text { font-family: Montserrat, sans-serif; font-weight: 800; font-size: 1.125rem; color: #01241b; letter-spacing: 0.05em; } .ds-nav-links { display: flex; align-items: center; gap: 4px; } .ds-nav-link { font-family: Montserrat, sans-serif; font-size: 0.75rem; font-weight: 700; color: #475569; text-decoration: none; padding: 8px 12px; border-radius: 6px; letter-spacing: 0.05em; transition: color 200ms ease, background 200ms ease; } .ds-nav-link:hover { color: #059669; background: #f4faf6; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Green Authority",
+    "overview": "EcoAlu's design system is built on institutional mass paired with a single earned green signal. The page shell is near-black (#041221) — the weight of a hundred-thousand-ton operation. Against it, the primary emerald (#059669) reads not as decoration but as a mark of certification: precise, specific, earned. White light sections break the dark rhythm when the content demands openness; they are not the default, they are the relief.\n\nThis system rejects two failure modes by name. 'Generic Vietnamese corporate' — the cluttered, banner-heavy, gradient-overloaded aesthetic that collapses authority into noise. And 'greenwashing SaaS' — the leaf icon, the stock forest photograph, the surface-level ESG gesture. EcoAlu's green is industrial. It shows up on buttons, section anchors, and icon containers because it is the mark of a real process, not a brand campaign.\n\nThe design is corporate without being corporate-cold. Montserrat headings at extrabold carry ambition; Roboto body text carries precision. Spacing is generous — section rhythm at 80px — because scale communicates capacity.",
+    "keyCharacteristics": [
+      "Dark mass (near-black shell) as default authority; white sections as deliberate relief",
+      "Emerald green as earned signal, not decoration — used at ≤15% of any screen surface",
+      "Extrabold Montserrat headings + clean Roboto body = industrial precision pairing",
+      "Flat-first elevation: borders and subtle shadows over blur or glassmorphism",
+      "Section headings uppercase, tracked, with a 4px emerald rule beneath — once per heading",
+      "Confident and direct components: solid fills, clear hierarchy, immediate hover feedback"
+    ],
+    "rules": [
+      {
+        "name": "The Scarcity Rule",
+        "body": "Emerald (#059669) appears on ≤15% of any given screen surface. One button, one underline, one icon fill. Its authority depends on its rarity. When green appears everywhere, it becomes wallpaper.",
+        "section": "colors"
+      },
+      {
+        "name": "The Dark Shell Rule",
+        "body": "White sections are contrast moments — About, Contact, and product cards — not the default mode. The page shell (#041221) is the dominant visual mass. Do not switch to white-background sections by default when adding new content; confirm whether the content warrants the break.",
+        "section": "colors"
+      },
+      {
+        "name": "The Heading Underline Rule",
+        "body": "Every <h2> section heading gets exactly one 4px emerald underline bar (h-1 bg-primary w-16 rounded-full), centered or left-aligned based on section layout. No section heading is exempt; no section heading gets two.",
+        "section": "typography"
+      },
+      {
+        "name": "The ALL CAPS Restraint Rule",
+        "body": "Uppercase tracking is used on section headings and on label-level text only. Do not apply uppercase tracking-wide to body copy, card titles, or CTA buttons. The CTA button uses sentence case or title case, not all caps.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-by-Default Rule",
+        "body": "No surface has a shadow at rest unless it is an explicitly interactive card or a major form container. Static content blocks, section backgrounds, and decorative elements: no shadow. Shadows are interaction signals, not layout decorators.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use #059669 emerald for ≤15% of any screen surface — one button, one underline, one icon fill per view.",
+      "Do keep the page shell (#041221) as the dominant background; white sections are deliberate contrast breaks, not the default.",
+      "Do pair Montserrat (700–800 weight) for all headings and Roboto (400) for all body copy.",
+      "Do use the section heading signature: uppercase <h2> + emerald underline bar. Every section. Once.",
+      "Do include real proof with every claim: capacity numbers, ISO certification names, partner logos.",
+      "Do cap hero display text at 3.75rem (60px) maximum.",
+      "Do include @media (prefers-reduced-motion: reduce) alternatives for every Framer Motion animation.",
+      "Do test every text color against its background for WCAG 2.1 AA: ≥4.5:1 for body text."
+    ],
+    "donts": [
+      "Don't use leaf icons, stock forest photography, or generic 'green = sustainable' visual shorthand for ESG content.",
+      "Don't produce cluttered layouts with banner-heavy headers, multiple competing CTAs per section, or gradient text on every heading.",
+      "Don't add glassmorphism (backdrop-filter: blur, frosted-glass cards) decoratively.",
+      "Don't use border-left greater than 1px as a colored accent stripe on cards or callouts.",
+      "Don't apply background-clip: text gradient to headings outside the .text-gradient-green utility class.",
+      "Don't add new section heading patterns that deviate from the uppercase + emerald underline signature.",
+      "Don't translate ESG commitment through color alone — ESG content needs specific claims, not just a green color wash.",
+      "Don't use rounded-full on buttons — the pill shape reads as SaaS or consumer app, not industrial authority."
+    ]
+  }
+}

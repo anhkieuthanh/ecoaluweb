@@ -16,10 +16,22 @@ export default function Contact() {
   const [activeBranch, setActiveBranch] = useState<'hn' | 'factory'>('hn');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
+
+  const errors = {
+    name: touched.name && !formData.name.trim(),
+    phone: touched.phone && !formData.phone.trim(),
+    message: touched.message && !formData.message.trim(),
+  };
+
+  const isFormValid = !!(formData.name.trim() && formData.phone.trim() && formData.message.trim());
+
+  const touch = (field: string) => setTouched(prev => ({ ...prev, [field]: true }));
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.phone || !formData.message) return;
+    setTouched({ name: true, phone: true, message: true });
+    if (!isFormValid) return;
 
     setIsSubmitting(true);
     // Simulate API request
@@ -27,7 +39,8 @@ export default function Contact() {
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({ name: '', phone: '', email: '', message: '' });
-      setTimeout(() => setIsSubmitted(false), 5000);
+      setTouched({});
+      setTimeout(() => setIsSubmitted(false), 8000);
     }, 1500);
   };
 
@@ -81,17 +94,8 @@ export default function Contact() {
             className="lg:col-span-7 flex flex-col justify-between"
           >
             <div className="mb-8">
-              {/* Phone & Email cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                <a href="tel:+84123456789" className="p-4 rounded-xl bg-glass border border-slate-150 hover:border-primary/20 flex items-center space-x-3.5 transition-all duration-300 shadow-sm">
-                  <div className="p-2.5 bg-primary-light text-primary rounded-lg">
-                    <Phone className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-bold text-slate-400 uppercase block tracking-wider">Hotline</span>
-                    <span className="text-xs sm:text-sm font-semibold text-slate-800">+84 (0) 123 456 789</span>
-                  </div>
-                </a>
+              {/* Contact cards */}
+              <div className="mb-6">
                 <a href="mailto:info@ecoalu.com.vn" className="p-4 rounded-xl bg-glass border border-slate-150 hover:border-primary/20 flex items-center space-x-3.5 transition-all duration-300 shadow-sm">
                   <div className="p-2.5 bg-primary-light text-primary rounded-lg">
                     <Mail className="h-5 w-5" />
@@ -170,10 +174,14 @@ export default function Contact() {
                   >
                     <CheckCircle className="h-16 w-16 text-primary mb-4" />
                     <h4 className="text-base sm:text-lg font-bold text-slate-800 mb-2">
-                      {language === 'vi' ? 'Gửi thành công!' : 'Submitted Successfully!'}
+                      {language === 'vi' ? 'Gửi thành công!' : language === 'en' ? 'Submitted Successfully!' : '提交成功！'}
                     </h4>
                     <p className="text-xs text-slate-500 px-4">
-                      {t('contact_sec', 'form_success')}
+                      {language === 'vi'
+                        ? 'Cảm ơn bạn! Chúng tôi sẽ liên hệ lại trong vòng 24 giờ qua số điện thoại bạn đã cung cấp.'
+                        : language === 'en'
+                        ? 'Thank you! We will contact you within 24 hours via the phone number you provided.'
+                        : '谢谢！我们将在24小时内通过您提供的电话号码与您联系。'}
                     </p>
                   </motion.div>
                 ) : (
@@ -187,16 +195,21 @@ export default function Contact() {
                     {/* Name */}
                     <div>
                       <label className="block text-xs font-semibold text-slate-500 mb-1.5 uppercase tracking-wide">
-                        {t('contact_sec', 'form_name')}
+                        {t('contact_sec', 'form_name')} <span className="text-red-400">*</span>
                       </label>
                       <input
                         type="text"
-                        required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-md py-2.5 px-4 text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-primary focus:bg-white transition-all"
-                        placeholder={language === 'vi' ? 'Nhập họ và tên...' : 'Enter full name...'}
+                        onBlur={() => touch('name')}
+                        className={`w-full bg-slate-50 rounded-md py-2.5 px-4 text-xs sm:text-sm text-slate-800 focus:outline-none focus:bg-white transition-all border ${errors.name ? 'border-red-400 focus:border-red-400' : 'border-slate-200 focus:border-primary'}`}
+                        placeholder={language === 'vi' ? 'Nhập họ và tên...' : language === 'en' ? 'Enter full name...' : '请输入姓名...'}
                       />
+                      {errors.name && (
+                        <p className="text-red-500 text-[10px] mt-1">
+                          {language === 'vi' ? 'Vui lòng nhập họ và tên' : language === 'en' ? 'Name is required' : '请输入姓名'}
+                        </p>
+                      )}
                     </div>
 
                     {/* Phone & Email grid */}
@@ -204,16 +217,21 @@ export default function Contact() {
                       {/* Phone */}
                       <div>
                         <label className="block text-xs font-semibold text-slate-500 mb-1.5 uppercase tracking-wide">
-                          {t('contact_sec', 'form_phone')}
+                          {t('contact_sec', 'form_phone')} <span className="text-red-400">*</span>
                         </label>
                         <input
                           type="tel"
-                          required
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full bg-slate-50 border border-slate-200 rounded-md py-2.5 px-4 text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-primary focus:bg-white transition-all"
-                          placeholder={language === 'vi' ? 'Nhập số điện thoại...' : 'Enter phone number...'}
+                          onBlur={() => touch('phone')}
+                          className={`w-full bg-slate-50 rounded-md py-2.5 px-4 text-xs sm:text-sm text-slate-800 focus:outline-none focus:bg-white transition-all border ${errors.phone ? 'border-red-400 focus:border-red-400' : 'border-slate-200 focus:border-primary'}`}
+                          placeholder={language === 'vi' ? 'Nhập số điện thoại...' : language === 'en' ? 'Enter phone number...' : '请输入电话号码...'}
                         />
+                        {errors.phone && (
+                          <p className="text-red-500 text-[10px] mt-1">
+                            {language === 'vi' ? 'Vui lòng nhập số điện thoại' : language === 'en' ? 'Phone number is required' : '请输入电话号码'}
+                          </p>
+                        )}
                       </div>
                       {/* Email */}
                       <div>
@@ -225,7 +243,7 @@ export default function Contact() {
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           className="w-full bg-slate-50 border border-slate-200 rounded-md py-2.5 px-4 text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-primary focus:bg-white transition-all"
-                          placeholder={language === 'vi' ? 'Nhập email (nếu có)...' : 'Enter email (optional)...'}
+                          placeholder={language === 'vi' ? 'Nhập email (nếu có)...' : language === 'en' ? 'Enter email (optional)...' : '邮箱（可选）...'}
                         />
                       </div>
                     </div>
@@ -233,23 +251,28 @@ export default function Contact() {
                     {/* Message */}
                     <div>
                       <label className="block text-xs font-semibold text-slate-500 mb-1.5 uppercase tracking-wide">
-                        {t('contact_sec', 'form_message')}
+                        {t('contact_sec', 'form_message')} <span className="text-red-400">*</span>
                       </label>
                       <textarea
-                        required
                         rows={4}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-md py-2.5 px-4 text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-primary focus:bg-white transition-all resize-none"
-                        placeholder={language === 'vi' ? 'Nhập nội dung cần hỗ trợ hợp tác...' : 'Enter message details...'}
+                        onBlur={() => touch('message')}
+                        className={`w-full bg-slate-50 rounded-md py-2.5 px-4 text-xs sm:text-sm text-slate-800 focus:outline-none focus:bg-white transition-all resize-none border ${errors.message ? 'border-red-400 focus:border-red-400' : 'border-slate-200 focus:border-primary'}`}
+                        placeholder={language === 'vi' ? 'Nhập nội dung cần hỗ trợ hợp tác...' : language === 'en' ? 'Enter message details...' : '请输入留言内容...'}
                       />
+                      {errors.message && (
+                        <p className="text-red-500 text-[10px] mt-1">
+                          {language === 'vi' ? 'Vui lòng nhập nội dung tin nhắn' : language === 'en' ? 'Message is required' : '请输入留言内容'}
+                        </p>
+                      )}
                     </div>
 
                     {/* Submit Button */}
                     <button
                       type="submit"
-                      disabled={isSubmitting}
-                      className="w-full bg-primary hover:bg-opacity-95 text-white py-3 rounded-md font-heading font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center space-x-2 transition-all duration-300 cursor-pointer disabled:opacity-50"
+                      disabled={isSubmitting || !isFormValid}
+                      className="w-full bg-primary hover:bg-opacity-95 text-white py-3 rounded-md font-heading font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center space-x-2 transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? (
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
