@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Header from '@/components/sections/Header';
 import Hero from '@/components/sections/Hero';
 import AboutUs from '@/components/sections/AboutUs';
@@ -12,6 +13,15 @@ import News from '@/components/sections/News';
 import Partners from '@/components/sections/Partners';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/sections/Footer';
+
+export const metadata: Metadata = {
+  title: "EcoAlu - Nhà Máy Nhôm Công Nghệ Cao | Tầm Vóc Việt",
+  description: "Dự án nhà máy Nhôm công nghệ cao ECOALU tại Thanh Hóa - Giải pháp cung ứng nhôm Ingot, Billet chất lượng cao hướng tới kinh tế tuần hoàn.",
+  keywords: "EcoAlu, nhôm công nghệ cao, nhôm ingot, nhôm billet, nhôm tái chế, kinh tế tuần hoàn, Thanh Hóa",
+  icons: {
+    icon: "/logo.png",
+  },
+};
 
 export default function Home() {
   return (
@@ -34,4 +44,3 @@ export default function Home() {
     </div>
   );
 }
-

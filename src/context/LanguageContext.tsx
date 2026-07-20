@@ -9,14 +9,17 @@ interface LanguageContextProps {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (section: string, key: string) => string;
+  isMounted: boolean;
 }
 
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>('vi');
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const savedLang = localStorage.getItem('language') as Language;
     if (savedLang && ['vi', 'en', 'cn'].includes(savedLang)) {
       setLanguageState(savedLang);
@@ -37,7 +40,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, isMounted }}>
       {children}
     </LanguageContext.Provider>
   );
