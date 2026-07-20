@@ -20,7 +20,7 @@ export default function NotFound() {
         </p>
         <Link
           href="/"
-          className="inline-flex items-center justify-center bg-primary hover:bg-emerald-800 text-white font-heading font-bold text-sm px-6 py-3 rounded-md transition-all shadow-md shadow-primary/20"
+          className="inline-flex items-center justify-center bg-primary hover:bg-accent-green-dark text-white font-heading font-bold text-sm px-6 py-3 rounded-md transition-all shadow-md shadow-primary/20"
         >
           Quay Về Trang Chủ
         </Link>

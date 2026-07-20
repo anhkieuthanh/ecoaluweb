@@ -105,7 +105,7 @@ export default function Hero() {
                   >
                     <button
                       onClick={handleCtaClick}
-                      className="group flex items-center justify-center bg-primary hover:bg-emerald-800 text-white px-6 sm:px-8 py-3.5 rounded-md font-heading font-bold text-sm sm:text-base tracking-wide transition-all duration-300 shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 cursor-pointer"
+                      className="group flex items-center justify-center bg-primary hover:bg-accent-green-dark text-white px-6 sm:px-8 py-3.5 rounded-md font-heading font-bold text-sm sm:text-base tracking-wide transition-all duration-300 shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 cursor-pointer"
                     >
                       {t('hero', 'cta')}
                       <ChevronRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -134,7 +134,7 @@ export default function Hero() {
           display: inline-block !important;
         }
         .swiper-pagination-bullet-active {
-          background-color: #10B981 !important;
+          background-color: var(--color-accent-green) !important;
           width: 48px !important;
           box-shadow: 0 0 8px rgba(16, 185, 129, 0.5) !important;
         }

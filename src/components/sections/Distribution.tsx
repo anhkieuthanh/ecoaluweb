@@ -153,16 +153,16 @@ export default function Distribution() {
                   <path d="M 80,180 Q 145,160 210,180" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4,4" />
                   
                   {/* Cau Treo -> Factory (Vibrant Emerald - raw materials import) */}
-                  <path d="M 210,180 L 285,155" stroke="#10b981" strokeWidth="3" />
+                  <path d="M 210,180 L 285,155" className="stroke-accent-green" strokeWidth="3" />
                   
                   {/* Tho Xuan Airport -> Factory (Slate Grey - air connection) */}
                   <path d="M 350,60 L 350,130" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="3,3" />
                   
                   {/* Factory -> Nghi Son Port (Primary Green - heavy logistics route) */}
-                  <path d="M 415,155 L 470,240" stroke="#059669" strokeWidth="3" />
+                  <path d="M 415,155 L 470,240" className="stroke-primary" strokeWidth="3" />
                   
                   {/* Nghi Son Port -> Export (Dark Emerald - global export lane) */}
-                  <path d="M 470,240 Q 515,220 560,180" stroke="#047857" strokeWidth="2.5" strokeDasharray="6,4" />
+                  <path d="M 470,240 Q 515,220 560,180" className="stroke-accent-green-dark" strokeWidth="2.5" strokeDasharray="6,4" />
 
                   {/* Nodes & Labels */}
                   
@@ -174,18 +174,18 @@ export default function Distribution() {
                   </text>
 
                   {/* Cau Treo */}
-                  <circle cx="210" cy="180" r="6" fill="#059669" />
+                  <circle cx="210" cy="180" r="6" className="fill-primary" />
                   <text x="210" y="208" textAnchor="middle" fill="#475569" fontSize="9" fontWeight="bold">
                     {language === 'vi' ? 'CỬA KHẨU CẦU TREO' : language === 'en' ? 'CAU TREO BORDER GATE' : '吊桥口岸'}
                   </text>
 
                   {/* EcoAlu Factory (Thanh Hoa) */}
                   <g>
-                    <rect x="285" y="130" width="130" height="50" rx="8" fill="#eefaf2" stroke="#059669" strokeWidth="2" />
-                    <text x="350" y="149" textAnchor="middle" fill="#047857" fontSize="10" fontWeight="bold">
+                    <rect x="285" y="130" width="130" height="50" rx="8" className="fill-primary-light stroke-primary" strokeWidth="2" />
+                    <text x="350" y="149" textAnchor="middle" className="fill-accent-green-dark" fontSize="10" fontWeight="bold">
                       {language === 'vi' ? 'NHÀ MÁY ECOALU' : 'ECOALU FACTORY'}
                     </text>
-                    <text x="350" y="165" textAnchor="middle" fill="#059669" fontSize="8" fontWeight="bold">
+                    <text x="350" y="165" textAnchor="middle" className="fill-primary" fontSize="8" fontWeight="bold">
                       {language === 'vi' ? 'TRIỆU SƠN, THANH HÓA' : 'TRIEU SON, THANH HOA'}
                     </text>
                   </g>
@@ -197,15 +197,15 @@ export default function Distribution() {
                   </text>
 
                   {/* Nghi Son Port */}
-                  <circle cx="470" cy="240" r="5" fill="#059669" />
+                  <circle cx="470" cy="240" r="5" className="fill-primary" />
                   <text x="470" y="265" textAnchor="middle" fill="#475569" fontSize="9" fontWeight="semibold">
                     {language === 'vi' ? 'CẢNG NGHI SƠN (60km)' : language === 'en' ? 'NGHI SON PORT (60km)' : '宜山港 (60km)'}
                   </text>
 
                   {/* International Export */}
-                  <circle cx="560" cy="180" r="6" fill="#047857" />
-                  <circle cx="560" cy="180" r="12" stroke="#047857" strokeWidth="1" strokeOpacity="0.5" className="animate-ping" />
-                  <text x="560" y="208" textAnchor="middle" fill="#047857" fontSize="9" fontWeight="bold">
+                  <circle cx="560" cy="180" r="6" className="fill-accent-green-dark" />
+                  <circle cx="560" cy="180" r="12" strokeWidth="1" strokeOpacity="0.5" className="animate-ping stroke-accent-green-dark" />
+                  <text x="560" y="208" textAnchor="middle" className="fill-accent-green-dark" fontSize="9" fontWeight="bold">
                     {language === 'vi' ? 'EXPORT (MỸ, EU, NHẬT...)' : language === 'en' ? 'EXPORT (US, EU, JP...)' : '出口 (美、欧、日...)'}
                   </text>
                 </svg>
@@ -220,7 +220,7 @@ export default function Distribution() {
               <div className="mt-8 text-center sm:text-left">
                 <button
                   onClick={handleCtaClick}
-                  className="group inline-flex items-center justify-center bg-primary hover:bg-emerald-800 text-white px-6 py-3 rounded-md font-heading font-bold text-sm tracking-wide transition-all duration-300 cursor-pointer shadow shadow-primary/10"
+                  className="group inline-flex items-center justify-center bg-primary hover:bg-accent-green-dark text-white px-6 py-3 rounded-md font-heading font-bold text-sm tracking-wide transition-all duration-300 cursor-pointer shadow shadow-primary/10"
                 >
                   {t('hero', 'cta')}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

@@ -14,7 +14,7 @@ export default function ESG() {
       icon: Leaf,
       title: t('esg_sec', 'env_title'),
       desc: t('esg_sec', 'env_desc'),
-      color: 'text-emerald-700 border-emerald-100 bg-emerald-50/40 hover:bg-emerald-50/80',
+      color: 'text-accent-green-dark border-primary-light bg-primary-light/40 hover:bg-primary-light/80',
     },
     {
       icon: Users,

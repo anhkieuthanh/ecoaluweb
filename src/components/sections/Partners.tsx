@@ -48,9 +48,9 @@ const PARTNER_LOGOS: Record<string, React.ComponentType> = {
   ),
   'CNC TECH THĂNG LONG': () => (
     <svg className="h-6 w-auto max-w-full" viewBox="0 0 150 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="6" width="18" height="18" rx="4" fill="#059669" />
+      <rect x="5" y="6" width="18" height="18" rx="4" className="fill-primary" />
       <path d="M 9,15 H 19 M 14,10 V 20" stroke="#ffffff" strokeWidth="2" />
-      <text x="29" y="19" fill="#059669" fontFamily="'Montserrat', sans-serif" fontWeight="900" fontSize="11" letterSpacing="1">CNCTECH</text>
+      <text x="29" y="19" className="fill-primary" fontFamily="'Montserrat', sans-serif" fontWeight="900" fontSize="11" letterSpacing="1">CNCTECH</text>
     </svg>
   ),
   'VietinBank': () => (

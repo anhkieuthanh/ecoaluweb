@@ -82,7 +82,7 @@ export default async function SingleNewsPage({ params }: ArticlePageProps) {
           {/* Article Header */}
           <article className="prose prose-slate max-w-none">
             <div className="flex items-center space-x-4 mb-4 text-xs">
-              <span className="bg-emerald-50 text-primary font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              <span className="bg-primary-light text-primary font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                 {article.category}
               </span>
               <span className="flex items-center text-slate-400">
