@@ -106,8 +106,8 @@ export default function Header() {
                       href={item.href}
                       className={`flex items-center text-xs sm:text-sm font-heading font-bold transition-all duration-200 px-3 py-2 rounded-md ${
                         active
-                          ? isScrolled ? 'text-primary bg-emerald-50' : 'text-emerald-400 bg-white/10'
-                          : isScrolled ? 'text-slate-700 hover:text-primary hover:bg-slate-50' : 'text-slate-100 hover:text-emerald-300 hover:bg-white/5'
+                          ? isScrolled ? 'text-primary bg-primary-light' : 'text-accent-green bg-white/10'
+                          : isScrolled ? 'text-slate-700 hover:text-primary hover:bg-slate-50' : 'text-slate-100 hover:text-accent-green hover:bg-white/5'
                       }`}
                     >
                       {item.label}
@@ -125,7 +125,7 @@ export default function Header() {
                               key={index}
                               href={subItem.target}
                               onClick={() => setActiveDropdown(null)}
-                              className="block w-full text-left px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-emerald-50 hover:text-primary transition-all duration-200 border-b border-slate-100 last:border-b-0"
+                              className="block w-full text-left px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-primary-light hover:text-primary transition-all duration-200 border-b border-slate-100 last:border-b-0"
                             >
                               {subItem.label}
                             </Link>
@@ -261,7 +261,7 @@ export default function Header() {
                         href={item.href}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={`text-left text-sm font-heading font-bold transition-colors duration-200 py-1.5 px-2 rounded ${
-                          active ? 'text-primary bg-emerald-50' : 'text-slate-800 hover:text-primary'
+                          active ? 'text-primary bg-primary-light' : 'text-slate-800 hover:text-primary'
                         }`}
                       >
                         {item.label}

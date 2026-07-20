@@ -25,12 +25,12 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#042a20] border-t border-emerald-950 pt-16 pb-8 relative overflow-hidden text-slate-200">
+    <footer className="bg-primary-dark border-t border-emerald-950 pt-16 pb-8 relative overflow-hidden text-slate-200">
       {/* Scroll to Top button */}
       <div className="absolute top-8 right-8 z-10">
         <button
           onClick={handleScrollToTop}
-          className="p-3 bg-emerald-900 border border-emerald-800/40 hover:border-accent-green/45 hover:text-accent-green text-slate-300 rounded-full transition-all duration-300 shadow-md cursor-pointer"
+          className="p-3 bg-primary-dark/80 border border-accent-green-dark/40 hover:border-accent-green/45 hover:text-accent-green text-slate-300 rounded-full transition-all duration-300 shadow-md cursor-pointer"
           title="Scroll to Top"
         >
           <ArrowUp className="h-5 w-5" />
