@@ -85,7 +85,7 @@ export default function Distribution() {
               {language === 'vi' ? 'Cửa ngõ kết nối giao thương trong nước & quốc tế' : language === 'en' ? 'The Gateway for Domestic & Global Commerce' : '国内和国际贸易的门户'}
             </h3>
             
-            <p className="text-sm sm:text-base text-slate-600 mb-8 leading-relaxed text-justify">
+            <p className="text-sm sm:text-base text-slate-600 mb-8 leading-relaxed text-left">
               {t('logistics', 'desc')}
             </p>
 
@@ -125,7 +125,7 @@ export default function Distribution() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7"
           >
-            <div className="p-6 rounded-2xl bg-glass border border-slate-100 backdrop-blur shadow-xl relative overflow-hidden">
+            <div className="p-6 rounded-2xl bg-glass border border-slate-100 shadow-xl relative overflow-hidden">
               {/* Card Title inside map */}
               <div className="mb-6 pb-4 border-b border-slate-100 flex items-center justify-between">
                 <div>

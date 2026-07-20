@@ -215,7 +215,7 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed inset-0 z-45 lg:hidden transform transition-all duration-300 ${
+        className={`fixed inset-0 z-50 lg:hidden transform transition-all duration-300 ${
           isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
