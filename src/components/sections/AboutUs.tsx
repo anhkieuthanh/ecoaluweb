@@ -75,13 +75,13 @@ export default function AboutUs() {
             transition={{ duration: 0.8 }}
           >
             <div className="prose max-w-none text-slate-600 mb-8 space-y-4">
-              <p className="text-justify text-sm sm:text-base leading-relaxed">
+              <p className="text-left text-sm sm:text-base leading-relaxed">
                 {t('about', 'intro_p1')}
               </p>
-              <p className="text-justify text-sm sm:text-base leading-relaxed">
+              <p className="text-left text-sm sm:text-base leading-relaxed">
                 {t('about', 'intro_p2')}
               </p>
-              <p className="text-justify text-sm sm:text-base leading-relaxed">
+              <p className="text-left text-sm sm:text-base leading-relaxed">
                 {t('about', 'intro_p3')}
               </p>
             </div>

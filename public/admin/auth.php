@@ -10,8 +10,17 @@
 // GitHub -> Settings -> Developer Settings -> OAuth Apps -> New OAuth App
 // - Homepage URL: https://yourdomain.com
 // - Authorization callback URL: https://yourdomain.com/admin/auth.php
-define('CLIENT_ID', 'Ov23lidDmC1amFQpBk5D');
-define('CLIENT_SECRET', '10b45107b200219468417b73f004f9049fb15b28');
+//
+// KHÔNG hardcode CLIENT_ID / CLIENT_SECRET ở đây — file này nằm trong public/,
+// bất kỳ ai cũng tải và đọc được source. Set 2 biến môi trường trên cPanel
+// (MultiPHP INI Editor / Setup Environment Variables) trước khi deploy:
+//   GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET
+define('CLIENT_ID', getenv('GITHUB_CLIENT_ID') ?: '');
+define('CLIENT_SECRET', getenv('GITHUB_CLIENT_SECRET') ?: '');
+
+if (CLIENT_ID === '' || CLIENT_SECRET === '') {
+    die('Thiếu cấu hình GITHUB_CLIENT_ID / GITHUB_CLIENT_SECRET trên server.');
+}
 
 // Bắt đầu Session để lưu trữ state bảo mật
 session_start();

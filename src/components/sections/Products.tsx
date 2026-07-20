@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import productsData from '@/data/products.json';
@@ -63,7 +64,7 @@ export default function Products() {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`flex items-center space-x-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-heading font-bold transition-all duration-300 border cursor-pointer ${
+                className={`flex items-center space-x-2 px-5 py-2.5 rounded text-xs sm:text-sm font-heading font-bold transition-all duration-300 border cursor-pointer ${
                   isActive
                     ? 'bg-primary border-primary text-white shadow-md'
                     : 'bg-glass border-slate-200 text-slate-600 hover:border-primary/20 hover:text-primary'
@@ -88,7 +89,11 @@ export default function Products() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5 }}
-                  className="flex flex-col rounded-2xl bg-glass border border-slate-100 overflow-hidden shadow-md relative group hover:border-primary/20 transition-all duration-300"
+                  className="group"
+                >
+                <Link
+                  href={`/products/${prod.id}/`}
+                  className="flex flex-col h-full rounded-2xl bg-glass border border-slate-100 overflow-hidden shadow-md relative hover:border-primary/20 transition-all duration-300"
                 >
                   {/* Image Container */}
                   <div className="relative h-60 w-full overflow-hidden bg-slate-100">
@@ -115,7 +120,7 @@ export default function Products() {
                         {prod.name[language] || prod.name['vi']}
                       </h3>
                       
-                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light mb-6 text-justify">
+                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light mb-6 text-left">
                         {prod.description[language] || prod.description['vi']}
                       </p>
 
@@ -147,6 +152,7 @@ export default function Products() {
                       </div>
                     </div>
                   </div>
+                </Link>
                 </motion.div>
               );
             })}

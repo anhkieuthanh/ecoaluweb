@@ -155,7 +155,7 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-5"
           >
-            <div className="p-6 sm:p-8 rounded-2xl bg-glass-heavy border border-slate-150 backdrop-blur shadow-xl flex flex-col justify-between h-full relative">
+            <div className="p-6 sm:p-8 rounded-2xl bg-glass-heavy border border-slate-150 shadow-xl flex flex-col justify-between h-full relative">
               <h3 className="text-lg sm:text-xl font-heading font-bold text-primary mb-6">
                 {language === 'vi' ? 'Gửi Yêu Cầu Liên Hệ' : language === 'en' ? 'Send Inquiry Request' : '发送联络请求'}
               </h3>
@@ -168,7 +168,7 @@ export default function Contact() {
                     exit={{ opacity: 0, scale: 0.9 }}
                     className="flex flex-col items-center justify-center text-center py-16"
                   >
-                    <CheckCircle className="h-16 w-16 text-primary mb-4 animate-bounce" />
+                    <CheckCircle className="h-16 w-16 text-primary mb-4" />
                     <h4 className="text-base sm:text-lg font-bold text-slate-800 mb-2">
                       {language === 'vi' ? 'Gửi thành công!' : 'Submitted Successfully!'}
                     </h4>

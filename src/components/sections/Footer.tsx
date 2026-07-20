@@ -54,7 +54,7 @@ export default function Footer() {
                 ECOALU
               </span>
             </Link>
-            <p className="text-xs text-slate-300 leading-relaxed mb-6 font-light text-justify max-w-sm">
+            <p className="text-xs text-slate-300 leading-relaxed mb-6 font-light text-left max-w-sm">
               {language === 'vi' 
                 ? 'Nhà máy nhôm công nghệ cao EcoAlu tại Thanh Hóa - Giải pháp sản xuất nhôm kỹ thuật cao hướng tới phát triển bền vững và kinh tế tuần hoàn.'
                 : language === 'en'
@@ -131,7 +131,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <span className="font-bold text-slate-100 mr-2">HQ:</span>
-                <span className="text-justify leading-relaxed">
+                <span className="text-left leading-relaxed">
                   {language === 'vi' 
                     ? 'Tòa nhà Golden Field, 24 Nguyễn Cơ Thạch, Mỹ Đình, Nam Từ Liêm, Hà Nội' 
                     : language === 'en' 
@@ -141,7 +141,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <span className="font-bold text-slate-100 mr-2">Factory:</span>
-                <span className="text-justify leading-relaxed">
+                <span className="text-left leading-relaxed">
                   {language === 'vi' 
                     ? 'Lô CN-05, Cụm công nghiệp Hợp Thắng, Triệu Sơn, Thanh Hóa' 
                     : language === 'en' 

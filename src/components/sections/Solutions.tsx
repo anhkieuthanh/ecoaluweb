@@ -72,7 +72,7 @@ export default function Solutions() {
               <h3 className="text-xl sm:text-2xl font-heading font-bold text-slate-800 mb-4 group-hover:text-primary transition-colors duration-200">
                 {t('solutions_sec', 'domestic_title')}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-justify mb-6">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left mb-6">
                 {t('solutions_sec', 'domestic_desc')}
               </p>
             </div>
@@ -97,7 +97,7 @@ export default function Solutions() {
               <h3 className="text-xl sm:text-2xl font-heading font-bold text-slate-800 mb-4 group-hover:text-primary transition-colors duration-200">
                 {t('solutions_sec', 'intl_title')}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-justify mb-6">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left mb-6">
                 {t('solutions_sec', 'intl_desc')}
               </p>
             </div>

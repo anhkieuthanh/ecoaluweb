@@ -19,10 +19,79 @@
     },
     "specs": [
       "P1020",
-      "A7",
+      "ADC12, ADC6, ADC12-SH, A360, A380, A356, A96, A98",
       "99.7% purity"
     ],
-    "image": "/images/product-ingot.png"
+    "image": "/images/product-ingot.png",
+    "detail": {
+      "intro": {
+        "vi": "Sản phẩm nhôm thỏi hợp kim Dinostar chất lượng cao, đa chủng loại: ADC12, ADC6, ADC3, ADC-SH, A360, A380, A390 (YD155), A96, A98, A413, AC2B, AC4B, AC4C,… có thể đáp ứng nhu cầu đúc của nhiều ngành công nghiệp khác nhau, từ sản xuất ô tô đến các thiết bị điện tử và gia dụng.",
+        "en": "High-quality Dinostar aluminum alloy ingots in a wide range of grades — ADC12, ADC6, ADC3, ADC-SH, A360, A380, A390 (YD155), A96, A98, A413, AC2B, AC4B, AC4C, and more — meeting the casting needs of industries from automotive to electronics and household appliances.",
+        "cn": "高品质Dinostar铝合金锭，品类齐全：ADC12、ADC6、ADC3、ADC-SH、A360、A380、A390 (YD155)、A96、A98、A413、AC2B、AC4B、AC4C等，可满足从汽车制造到电子及家用电器等多个行业的铸造需求。"
+      },
+      "intro2": {
+        "vi": "Nhôm thỏi hợp kim EcoAlu được sản xuất với công nghệ tiên tiến từ Nhật Bản. Sản phẩm đáp ứng các tiêu chuẩn chất lượng khắt khe nhất trên thế giới. Nhôm EcoAlu không chỉ mang lại hiệu suất vượt trội trong các ứng dụng công nghiệp mà còn khẳng định độ tin cậy cao, giúp doanh nghiệp tối ưu hóa quy trình sản xuất.",
+        "en": "EcoAlu aluminum alloy ingots are manufactured using advanced technology from Japan, meeting the world's most rigorous quality standards. EcoAlu aluminum delivers outstanding performance in industrial applications while ensuring high reliability, helping businesses optimize their production processes.",
+        "cn": "EcoAlu铝合金锭采用日本先进技术生产，符合世界上最严格的质量标准。EcoAlu铝材不仅在工业应用中带来卓越性能，还确保高可靠性，帮助企业优化生产流程。"
+      },
+      "advantagesTitle": {
+        "vi": "Những ưu điểm vượt trội của Nhôm EcoAlu",
+        "en": "Outstanding Advantages of EcoAlu Aluminum",
+        "cn": "EcoAlu铝材的卓越优势"
+      },
+      "advantages": [
+        {
+          "title": { "vi": "Khả năng đúc vượt trội", "en": "Superior Castability", "cn": "卓越的铸造性能" },
+          "desc": {
+            "vi": "Nhôm thỏi hợp kim EcoAlu có khả năng đúc vượt trội, dễ dàng lấp đầy các khuôn đúc phức tạp, tạo hình các chi tiết với độ chính xác cao.",
+            "en": "EcoAlu aluminum alloy ingots offer superior castability, easily filling complex molds and forming parts with high precision.",
+            "cn": "EcoAlu铝合金锭具有卓越的铸造性能，能轻松填充复杂模具，以高精度成型零件。"
+          }
+        },
+        {
+          "title": { "vi": "Độ bền cực cao", "en": "Exceptional Durability", "cn": "超高耐久性" },
+          "desc": {
+            "vi": "Sản phẩm sở hữu khả năng chịu lực và chống mài mòn tuyệt vời, đảm bảo tuổi thọ dài trong các điều kiện khắc nghiệt. Đây là lý do nhôm thỏi hợp kim EcoAlu luôn được ưu tiên trong các ngành công nghiệp đòi hỏi độ bền vật liệu cao.",
+            "en": "The product offers excellent load-bearing and wear resistance, ensuring a long service life under harsh conditions — the reason EcoAlu aluminum alloy ingots are favored in industries demanding high material durability.",
+            "cn": "产品具有出色的承载能力和耐磨性，确保在恶劣条件下拥有较长的使用寿命。这也是EcoAlu铝合金锭在对材料耐久性要求高的行业中备受青睐的原因。"
+          }
+        },
+        {
+          "title": { "vi": "Ứng dụng linh hoạt", "en": "Versatile Applications", "cn": "灵活的应用范围" },
+          "desc": {
+            "vi": "Nhôm thỏi EcoAlu có thể sử dụng cho nhiều mục đích khác nhau, từ chế tạo linh kiện ô tô, máy móc công nghiệp đến sản xuất thiết bị điện tử và đồ gia dụng. Sự đa dạng trong chủng loại các dòng sản phẩm nhôm hợp kim phù hợp với mọi yêu cầu sản xuất.",
+            "en": "EcoAlu aluminum ingots serve a wide range of purposes, from automotive components and industrial machinery to electronics and household appliances. The diversity of alloy grades meets every production requirement.",
+            "cn": "EcoAlu铝锭可用于多种用途，从汽车零部件、工业机械到电子设备和家用电器制造。多样化的合金牌号可满足各种生产需求。"
+          }
+        }
+      ],
+      "certifications": ["ISO 9001", "ISO 14001", "RoHS"],
+      "certNote": {
+        "vi": "Nhôm thỏi hợp kim EcoAlu đạt các chứng nhận quốc tế như ISO 9001, ISO 14001, và RoHS, khẳng định cam kết của nhà máy nhôm công nghệ cao EcoAlu về chất lượng và môi trường.",
+        "en": "EcoAlu aluminum alloy ingots hold international certifications including ISO 9001, ISO 14001, and RoHS, affirming EcoAlu's commitment to quality and environmental responsibility.",
+        "cn": "EcoAlu铝合金锭获得ISO 9001、ISO 14001和RoHS等国际认证，彰显EcoAlu高科技铝厂对品质与环境的承诺。"
+      },
+      "specTable": {
+        "caption": {
+          "vi": "Thành phần các mác nhôm hợp kim thường gặp (Nhôm thỏi hợp kim)",
+          "en": "Chemical composition of common aluminum alloy grades (Aluminum alloy ingots)",
+          "cn": "常见铝合金牌号的化学成分（铝合金锭）"
+        },
+        "columns": ["Tên NT", "Cu", "Fe", "Si", "Mn", "Mg", "Zn", "Ni", "Sn", "Ti", "Pb", "Cr"],
+        "rows": [
+          ["ADC12", "1.5 - 3.5", "0.6 - 1.0", "9.6 - 12", "≤ 0.5", "≤ 0.3", "≤ 1", "≤ 0.5", "≤ 0.2", "≤ 0.3", "0.08;0.1;0.2", "≤ 0.1"],
+          ["ADC12-SH", "1 - 1.5", "≤ 1.1", "9.0 - 11", "≤ 0.5", "≤ 0.5", "≤ 2", "≤ 0.5", "≤ 0.3", "≤ 0.3", "0.1 - 0.2", "-"],
+          ["ADC6", "≤ 0.1", "≤ 0.6", "≤ 1", "0.4 - 0.6", "2.6 - 4.0", "≤ 0.4", "≤ 0.1", "≤ 0.1", "≤ 0.2", "≤ 0.1", "≤ 0.1"],
+          ["A360", "≤ 0.6", "≤ 1.3", "9.0 - 10.0", "≤ 0.3", "0.4 - 0.6", "≤ 0.5", "≤ 0.5", "≤ 0.15", "≤ 0.15", "≤ 0.1", "-"],
+          ["ADC3", "≤ 0.6", "≤ 1", "9.0 - 11.0", "≤ 0.3", "0.45 - 0.64", "≤ 0.5", "≤ 0.5", "≤ 0.1", "≤ 0.3", "≤ 0.15", "-"],
+          ["A380", "3.2 - 3.8", "≤ 1.3", "7.7 - 9.3", "≤ 0.5", "≤ 0.3", "≤ 3", "≤ 0.5", "≤ 0.35", "-", "-", "-"],
+          ["A390", "4.0 - 5.0", "≤ 1.3", "16 - 18", "≤ 0.5", "0.45 - 0.65", "≤ 1.5", "≤ 0.1", "-", "≤ 0.1", "-", "-"],
+          ["A413", "≤ 1", "≤ 1.3", "11.0 - 13.0", "≤ 0.35", "≤ 0.1", "≤ 0.5", "≤ 0.5", "≤ 0.15", "-", "-", "-"],
+          ["HS1S", "2.5 - 3.5", "≤ 0.6", "6.5 - 7.5", "≤ 0.3", "0.1 - 0.3", "≤ 0.4", "-", "-", "-", "-", "-"],
+          ["A356", "≤ 0.2", "≤ 0.2", "≤ 7", "≤ 0.1", "≤ 0.35", "≤ 0.1", "-", "-", "-", "-", "-"]
+        ]
+      }
+    }
   },
   {
     "id": "billet",
@@ -47,7 +116,70 @@
       "T4, T5, T6",
       "Diameter: 3 - 10 inches"
     ],
-    "image": "/images/product-billet.png"
+    "image": "/images/product-billet.png",
+    "detail": {
+      "intro": {
+        "vi": "Nhôm Billet EcoAlu được sản xuất từ nhôm thỏi hợp kim cao cấp trên dây chuyền đúc liên tục hiện đại, đạt độ đồng đều thành phần vượt trội và khả năng đùn ép ổn định, đáp ứng nhu cầu đầu vào của ngành công nghiệp đùn ép nhôm.",
+        "en": "EcoAlu Aluminum Billet is cast from premium alloy ingots on a modern continuous-casting line, achieving superior compositional uniformity and stable extrudability to serve as high-quality feedstock for the aluminum extrusion industry.",
+        "cn": "EcoAlu铝圆棒采用优质合金铝锭，通过现代连续铸造生产线制造，成分均匀性卓越、挤压性能稳定，可作为铝挤压行业的优质原料。"
+      },
+      "intro2": {
+        "vi": "Sản phẩm được cung cấp theo nhiều mác hợp kim (A6063, A6061, A6005A và dòng Series 7000), phục vụ đa dạng lĩnh vực từ xây dựng, giao thông vận tải đến hàng không và thiết bị hiệu năng cao.",
+        "en": "Available in multiple alloy grades (A6063, A6061, A6005A, and the 7000 Series), serving diverse fields from construction and transportation to aviation and high-performance equipment.",
+        "cn": "产品提供多种合金牌号（A6063、A6061、A6005A及7000系列），广泛应用于建筑、交通运输乃至航空及高性能设备等领域。"
+      },
+      "advantagesTitle": {
+        "vi": "Những ưu điểm vượt trội của Nhôm Billet EcoAlu",
+        "en": "Outstanding Advantages of EcoAlu Aluminum Billet",
+        "cn": "EcoAlu铝圆棒的卓越优势"
+      },
+      "advantages": [
+        {
+          "title": { "vi": "Độ đồng đều thành phần cao", "en": "High Compositional Uniformity", "cn": "成分均匀性高" },
+          "desc": {
+            "vi": "Quy trình đúc liên tục kiểm soát chặt chẽ tỷ lệ hợp kim, hạn chế rỗ khí và tạp chất, đảm bảo chất lượng đồng đều trên toàn bộ chiều dài billet.",
+            "en": "The continuous-casting process tightly controls alloy ratios, minimizing porosity and inclusions to ensure consistent quality along the entire billet length.",
+            "cn": "连续铸造工艺严格控制合金配比，减少气孔和夹杂物，确保铝棒全长质量均匀一致。"
+          }
+        },
+        {
+          "title": { "vi": "Khả năng đùn ép ổn định", "en": "Stable Extrudability", "cn": "挤压性能稳定" },
+          "desc": {
+            "vi": "Cấu trúc hạt tinh thể mịn giúp quá trình đùn ép diễn ra ổn định, giảm phế phẩm và nâng cao tốc độ sản xuất cho nhà máy đối tác.",
+            "en": "A fine grain structure enables a stable extrusion process, reducing scrap rates and increasing production speed for partner manufacturers.",
+            "cn": "细晶粒结构使挤压过程更加稳定，降低废品率并提高合作工厂的生产效率。"
+          }
+        },
+        {
+          "title": { "vi": "Đa dạng mác hợp kim", "en": "Diverse Alloy Grades", "cn": "合金牌号多样" },
+          "desc": {
+            "vi": "Cung cấp đầy đủ các mác A6063, A6061, A6005A và Series 7000, đáp ứng yêu cầu kỹ thuật riêng biệt của từng ngành công nghiệp.",
+            "en": "A full range of A6063, A6061, A6005A, and 7000 Series grades meets the specific technical requirements of each industry.",
+            "cn": "提供A6063、A6061、A6005A及7000系列等全系列牌号，满足各行业的特定技术要求。"
+          }
+        }
+      ],
+      "certifications": ["ISO 9001:2015", "ISO 14001:2015", "JIS H4100:2015"],
+      "certNote": {
+        "vi": "Nhôm Billet EcoAlu được sản xuất theo tiêu chuẩn ISO 9001:2015, ISO 14001:2015 và JIS H4100:2015, đảm bảo chất lượng ổn định và thân thiện với môi trường trong suốt quá trình sản xuất.",
+        "en": "EcoAlu Aluminum Billet is manufactured to ISO 9001:2015, ISO 14001:2015, and JIS H4100:2015 standards, ensuring stable quality and environmental responsibility throughout production.",
+        "cn": "EcoAlu铝圆棒按照ISO 9001:2015、ISO 14001:2015及JIS H4100:2015标准生产，确保生产全过程质量稳定且环保。"
+      },
+      "specTable": {
+        "caption": {
+          "vi": "Đặc tính chính theo mác hợp kim Billet",
+          "en": "Key Characteristics by Billet Alloy Grade",
+          "cn": "铝棒合金牌号主要特性"
+        },
+        "columns": ["Mác hợp kim", "Đặc tính chính", "Ứng dụng"],
+        "rows": [
+          ["A6063", "Bề mặt nhẵn mịn, dễ anodizing/sơn tĩnh điện", "Kiến trúc, cửa nhôm, vách kính mặt dựng"],
+          ["A6061", "Độ bền kéo tốt, chống ăn mòn, dễ gia công", "Ô tô, hàng không, tàu cao tốc"],
+          ["A6005A", "Hàm lượng Mn, Cr cao, đùn ổn định, dễ uốn và hàn", "Vận tải, xây dựng"],
+          ["Series 7000", "Độ cứng và độ bền vượt trội", "Hàng không, thiết bị quân sự, thể thao hiệu năng cao"]
+        ]
+      }
+    }
   },
   {
     "id": "profile",
@@ -72,6 +204,67 @@
       "Anodizing, Powder Coating",
       "International standards"
     ],
-    "image": "/images/product-profile.png"
+    "image": "/images/product-profile.png",
+    "detail": {
+      "intro": {
+        "vi": "Nhôm thanh định hình EcoAlu được đùn ép từ các mác hợp kim 6063, 6061, 6005A theo tiêu chuẩn JIS H4100:2015 và TCXDVN 330:2004, đáp ứng đồng thời yêu cầu về độ bền cơ học, tính thẩm mỹ và khả năng xử lý bề mặt cho công trình dân dụng lẫn công nghiệp.",
+        "en": "EcoAlu shaped aluminum profiles are extruded from 6063, 6061, and 6005A alloy grades per JIS H4100:2015 and TCXDVN 330:2004, meeting mechanical strength, aesthetic, and surface-finishing requirements for both residential and industrial projects.",
+        "cn": "EcoAlu铝型材采用6063、6061、6005A合金牌号，按JIS H4100:2015及TCXDVN 330:2004标准挤压生产，同时满足民用与工业项目对机械强度、美观性及表面处理的要求。"
+      },
+      "intro2": {
+        "vi": "Sản phẩm được xử lý bề mặt bằng anod hóa hoặc sơn tĩnh điện theo tiêu chuẩn AAMA 2603-13/2604-13 và QUALICOAT, phù hợp cho khung cửa, vách kính mặt dựng, kết cấu công nghiệp và nội thất.",
+        "en": "Surface treatment is applied via anodizing or electrostatic powder coating in accordance with AAMA 2603-13/2604-13 and QUALICOAT standards, suitable for window frames, curtain walls, industrial structures, and interior applications.",
+        "cn": "产品表面处理采用阳极氧化或静电喷涂工艺，符合AAMA 2603-13/2604-13及QUALICOAT标准，适用于门窗框架、幕墙玻璃、工业结构及室内装饰。"
+      },
+      "advantagesTitle": {
+        "vi": "Những ưu điểm vượt trội của Nhôm Định Hình EcoAlu",
+        "en": "Outstanding Advantages of EcoAlu Aluminum Profiles",
+        "cn": "EcoAlu铝型材的卓越优势"
+      },
+      "advantages": [
+        {
+          "title": { "vi": "Độ bền cơ học đạt chuẩn quốc tế", "en": "Internationally Certified Mechanical Strength", "cn": "机械强度符合国际标准" },
+          "desc": {
+            "vi": "Trạng thái nhiệt luyện T5/T6 cho giới hạn bền kéo từ 150 đến 205 N/mm², đảm bảo khả năng chịu lực trong điều kiện xây dựng và công nghiệp khắc nghiệt.",
+            "en": "T5/T6 tempers deliver tensile strength from 150 to 205 N/mm², ensuring load-bearing capability under demanding construction and industrial conditions.",
+            "cn": "T5/T6热处理状态可使抗拉强度达到150至205 N/mm²，确保在严苛的建筑与工业环境下具备承载能力。"
+          }
+        },
+        {
+          "title": { "vi": "Xử lý bề mặt bền màu, đa dạng", "en": "Durable, Versatile Surface Finishing", "cn": "表面处理耐久且多样" },
+          "desc": {
+            "vi": "Lớp anod hóa dày 6-12μm hoặc sơn tĩnh điện 8-16μm, chịu mài mòn và ăn mòn muối 1.500-3.000 giờ theo ASTM B117, giữ màu bền đẹp theo thời gian.",
+            "en": "6-12μm anodized coating or 8-16μm powder coating withstands 1,500-3,000 hours of salt-spray exposure per ASTM B117, retaining color and finish over time.",
+            "cn": "6-12微米阳极氧化层或8-16微米静电喷涂层，按ASTM B117可耐受1500-3000小时盐雾腐蚀，长期保持色泽美观。"
+          }
+        },
+        {
+          "title": { "vi": "Dung sai kích thước chính xác", "en": "Precise Dimensional Tolerances", "cn": "尺寸公差精准" },
+          "desc": {
+            "vi": "Kiểm soát dung sai tiết diện ±0,15-0,2mm và dung sai chiều dài chặt chẽ, đảm bảo lắp ráp chính xác cho hệ khung nhôm kính và kết cấu công nghiệp.",
+            "en": "Cross-section tolerances of ±0.15-0.2mm and tight length tolerances ensure precise assembly for aluminum-glass framing systems and industrial structures.",
+            "cn": "截面公差控制在±0.15-0.2毫米，长度公差严格，确保铝合金门窗幕墙及工业结构精准装配。"
+          }
+        }
+      ],
+      "certifications": ["ISO 9001:2015", "ISO 14001:2015", "JIS H4100:2015", "TCXDVN 330:2004", "AAMA 2603-13/2604-13", "QUALICOAT", "RoHS"],
+      "certNote": {
+        "vi": "Nhôm Định Hình EcoAlu đạt các chứng nhận ISO 9001:2015, ISO 14001:2015, JIS H4100:2015, TCXDVN 330:2004, AAMA 2603-13/2604-13, QUALICOAT và RoHS, khẳng định chất lượng ổn định và cam kết môi trường trong toàn bộ chuỗi sản xuất.",
+        "en": "EcoAlu Aluminum Profiles hold ISO 9001:2015, ISO 14001:2015, JIS H4100:2015, TCXDVN 330:2004, AAMA 2603-13/2604-13, QUALICOAT, and RoHS certifications, affirming consistent quality and environmental commitment across the production chain.",
+        "cn": "EcoAlu铝型材获得ISO 9001:2015、ISO 14001:2015、JIS H4100:2015、TCXDVN 330:2004、AAMA 2603-13/2604-13、QUALICOAT及RoHS认证，彰显整个生产链条稳定的质量与环保承诺。"
+      },
+      "specTable": {
+        "caption": {
+          "vi": "Cơ tính theo mác hợp kim & trạng thái nhiệt luyện",
+          "en": "Mechanical Properties by Alloy Grade & Temper",
+          "cn": "合金牌号及热处理状态的机械性能"
+        },
+        "columns": ["Mác hợp kim / Trạng thái", "Giới hạn bền kéo", "Giới hạn chảy", "Độ giãn dài"],
+        "rows": [
+          ["6063-T5 (≤12mm)", "≥ 150 N/mm²", "≥ 110 N/mm²", "≥ 8%"],
+          ["6063-T6", "≥ 205 N/mm²", "≥ 170 N/mm²", "≥ 8-10%"]
+        ]
+      }
+    }
   }
 ]

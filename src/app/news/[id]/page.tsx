@@ -95,7 +95,7 @@ export default async function SingleNewsPage({ params }: ArticlePageProps) {
               {article.title?.vi}
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-600 font-light leading-relaxed italic border-l-4 border-primary pl-4 py-1 mb-8 bg-slate-50 rounded-r">
+            <p className="text-base sm:text-lg text-slate-600 font-light leading-relaxed italic border border-primary/20 bg-slate-50 rounded-lg px-5 py-4 mb-8">
               {article.summary?.vi}
             </p>
 
@@ -113,7 +113,7 @@ export default async function SingleNewsPage({ params }: ArticlePageProps) {
             )}
 
             {/* Article Content Body (Multilingual dynamic content rendering) */}
-            <div className="text-slate-700 leading-relaxed space-y-6 text-sm sm:text-base text-justify font-normal">
+            <div className="text-slate-700 leading-relaxed space-y-6 text-sm sm:text-base text-left font-normal">
               <p>
                 Dự án nhà máy Nhôm công nghệ cao <strong>EcoAlu</strong> tại Lô CN-05, Cụm công nghiệp Hợp Thắng, Triệu Sơn, Thanh Hóa là bước tiến chiến lược nâng tầm vị thế ngành nhôm Việt Nam trên bản đồ công nghiệp khu vực.
               </p>
@@ -147,7 +147,7 @@ export default async function SingleNewsPage({ params }: ArticlePageProps) {
                         {rel.title?.vi}
                       </h4>
                     </div>
-                    <span className="text-[11px] text-slate-400 mt-4 block">
+                    <span className="text-xs text-slate-400 mt-4 block">
                       {rel.date}
                     </span>
                   </Link>

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import newsData from '@/data/news.json';
@@ -92,18 +93,22 @@ export default function News() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                className="flex flex-col rounded-2xl bg-glass border border-slate-100 overflow-hidden hover:border-primary/25 group transition-all duration-300 shadow-md"
+                className="group"
+              >
+              <Link
+                href={`/news/${item.id}/`}
+                className="flex flex-col h-full rounded-2xl bg-glass border border-slate-100 overflow-hidden hover:border-primary/25 transition-all duration-300 shadow-md"
               >
                 {/* Thumbnail */}
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
                   <Image
-                    src={
+                    src={item.image || (
                       item.category === 'enterprise' ? '/images/hero-factory-1.png' :
-                      item.category === 'market' ? '/images/hero-factory-2.png' :
-                      item.category === 'internal' ? '/images/hero-factory-3.png' :
-                      item.category === 'csr' ? '/images/factory-layout.png' :
-                      '/images/product-ingot.png'
-                    }
+                      item.category === 'market'     ? '/images/hero-factory-2.png' :
+                      item.category === 'internal'   ? '/images/hero-factory-3.png' :
+                      item.category === 'csr'        ? '/images/factory-layout.png' :
+                                                       '/images/hero-factory-1.png'
+                    )}
                     alt={item.title[language] || item.title['vi']}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -126,20 +131,21 @@ export default function News() {
                       <span>{formatDate(item.date)}</span>
                     </div>
 
-                    <h3 className="text-sm sm:text-base font-heading font-bold text-slate-800 group-hover:text-primary transition-colors duration-200 line-clamp-2 leading-snug mb-3 text-justify">
+                    <h3 className="text-sm sm:text-base font-heading font-bold text-slate-800 group-hover:text-primary transition-colors duration-200 line-clamp-2 leading-snug mb-3 text-left">
                       {item.title[language] || item.title['vi']}
                     </h3>
 
-                    <p className="text-xs text-slate-500 font-light leading-relaxed mb-6 line-clamp-3 text-justify">
+                    <p className="text-xs text-slate-500 font-light leading-relaxed mb-6 line-clamp-3 text-left">
                       {item.summary[language] || item.summary['vi']}
                     </p>
                   </div>
 
-                  <button className="group/btn flex items-center text-xs font-bold text-primary hover:text-accent-green transition-colors duration-200 mt-auto cursor-pointer">
+                  <span className="flex items-center text-xs font-bold text-primary group-hover:text-accent-green transition-colors duration-200 mt-auto">
                     <span>{t('news_sec', 'read_more')}</span>
-                    <ChevronRight className="ml-1 h-4 w-4 transition-transform duration-200 group-hover/btn:translate-x-0.5" />
-                  </button>
+                    <ChevronRight className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                  </span>
                 </div>
+              </Link>
               </motion.article>
             ))}
           </AnimatePresence>

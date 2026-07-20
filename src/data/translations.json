@@ -224,6 +224,21 @@
       "vi": "Công suất:",
       "en": "Capacity:",
       "cn": "产能:"
+    },
+    "back_to_list": {
+      "vi": "Quay lại danh sách sản phẩm",
+      "en": "Back to product list",
+      "cn": "返回产品列表"
+    },
+    "certifications_label": {
+      "vi": "Chứng nhận chất lượng",
+      "en": "Quality Certifications",
+      "cn": "质量认证"
+    },
+    "other_products": {
+      "vi": "Sản phẩm khác",
+      "en": "Other Products",
+      "cn": "其他产品"
     }
   },
   "solutions_sec": {
