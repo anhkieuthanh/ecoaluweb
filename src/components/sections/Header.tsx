@@ -79,7 +79,6 @@ export default function Header() {
                 alt="EcoAlu Logo"
                 width={120}
                 height={40}
-                style={{ width: 'auto', height: 'auto' }}
                 className={`h-10 w-auto object-contain transition-all duration-300 ${
                   isScrolled ? '' : 'brightness-0 invert'
                 }`}
@@ -238,7 +237,6 @@ export default function Header() {
                     alt="EcoAlu Logo"
                     width={90}
                     height={30}
-                    style={{ width: 'auto', height: 'auto' }}
                     className="h-8 w-auto object-contain"
                   />
                   <span className="ml-2 font-heading font-extrabold text-md tracking-wider text-primary">

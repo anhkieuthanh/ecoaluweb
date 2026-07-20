@@ -22,7 +22,7 @@
       "A7",
       "99.7% purity"
     ],
-    "image": "/images/product-ingot.jpg"
+    "image": "/images/product-ingot.png"
   },
   {
     "id": "billet",
@@ -47,7 +47,7 @@
       "T4, T5, T6",
       "Diameter: 3 - 10 inches"
     ],
-    "image": "/images/product-billet.jpg"
+    "image": "/images/product-billet.png"
   },
   {
     "id": "profile",
@@ -72,6 +72,6 @@
       "Anodizing, Powder Coating",
       "International standards"
     ],
-    "image": "/images/product-profile.jpg"
+    "image": "/images/product-profile.png"
   }
 ]

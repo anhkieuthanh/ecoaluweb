@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import { useLanguage } from '@/context/LanguageContext';
@@ -68,15 +67,10 @@ export default function Hero() {
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="relative w-full h-full">
             {/* Background Image */}
-            <div className="absolute inset-0 transition-transform duration-[6000ms] ease-out scale-105 swiper-zoom-container">
-              <Image
-                src={slide.image}
-                alt={slide.title}
-                fill
-                priority={index === 0}
-                className="object-cover object-center"
-              />
-            </div>
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-[6000ms] ease-out scale-105 swiper-zoom-container"
+              style={{ backgroundImage: `url('${slide.image}')` }}
+            />
             {/* Overlay Gradient: Deep forest black instead of navy blue */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#011a13] via-[#011a13]/75 to-transparent sm:bg-gradient-to-t sm:from-[#011a13] sm:via-[#011a13]/60 sm:to-black/30" />
 
